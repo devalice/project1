@@ -1,0 +1,120 @@
+15:56:13.678+0900 [restartedMain] INFO  org.hibernate.dialect.Dialect -
+			HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:56:13.683+0900 [restartedMain] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope -
+			Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2bba71db] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@51f8e1ec]
+15:56:13.698+0900 [restartedMain] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope -
+			Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2bba71db] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@5d57ac7e]
+15:56:13.815+0900 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator -
+			HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:56:13.815+0900 [restartedMain] TRACE org.hibernate.type.spi.TypeConfiguration$Scope -
+			Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@5d57ac7e] for TypeConfiguration
+15:56:13.815+0900 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+			Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:56:13.881+0900 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration -
+			spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:56:14.029+0900 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer -
+			LiveReload server is running on port 35729
+15:56:14.034+0900 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol -
+			Starting ProtocolHandler ["http-nio-8080"]
+15:56:14.036+0900 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+			Tomcat started on port(s): 8080 (http) with context path ''
+15:56:14.039+0900 [restartedMain] INFO  kr.co.abandog.AbandoneddogApplication -
+			Started AbandoneddogApplication in 0.887 seconds (JVM running for 12936.902)
+15:56:14.040+0900 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener -
+			Condition evaluation unchanged
+15:57:03.514+0900 [Thread-55] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -
+			Closing JPA EntityManagerFactory for persistence unit 'default'
+15:57:03.514+0900 [Thread-55] TRACE org.hibernate.type.spi.TypeConfiguration$Scope -
+			Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@5d57ac7e] for TypeConfiguration
+15:57:03.514+0900 [Thread-55] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope -
+			Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@38afeb11] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@5d57ac7e]
+15:57:03.515+0900 [Thread-55] INFO  com.zaxxer.hikari.HikariDataSource -
+			HikariPool-14 - Shutdown initiated...
+15:57:03.520+0900 [Thread-55] INFO  com.zaxxer.hikari.HikariDataSource -
+			HikariPool-14 - Shutdown completed.
+15:57:03.626+0900 [restartedMain] INFO  kr.co.abandog.AbandoneddogApplication -
+			Starting AbandoneddogApplication using Java 11.0.12 on LAPTOP-DQ0S1TQE with PID 9892 (C:\Users\한설희\git\abandogProject\abandoneddog\bin\main started by han in C:\Users\한설희\git\abandogProject\abandoneddog)
+15:57:03.627+0900 [restartedMain] INFO  kr.co.abandog.AbandoneddogApplication -
+			No active profile set, falling back to default profiles: default
+15:57:03.772+0900 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+			Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:57:03.799+0900 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -
+			Finished Spring Data repository scanning in 26 ms. Found 10 JPA repository interfaces.
+15:57:03.865+0900 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -
+			Tomcat initialized with port(s): 8080 (http)
+15:57:03.865+0900 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol -
+			Initializing ProtocolHandler ["http-nio-8080"]
+15:57:03.865+0900 [restartedMain] INFO  org.apache.catalina.core.StandardService -
+			Starting service [Tomcat]
+15:57:03.865+0900 [restartedMain] INFO  org.apache.catalina.core.StandardEngine -
+			Starting Servlet engine: [Apache Tomcat/9.0.53]
+15:57:03.885+0900 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -
+			Initializing Spring embedded WebApplicationContext
+15:57:03.885+0900 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext -
+			Root WebApplicationContext: initialization completed in 255 ms
+15:57:03.910+0900 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper -
+			HHH000204: Processing PersistenceUnitInfo [name: default]
+15:57:03.912+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration boolean -> org.hibernate.type.BooleanType@1328bab9
+15:57:03.912+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration boolean -> org.hibernate.type.BooleanType@1328bab9
+15:57:03.912+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1328bab9
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@3f76e449
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration true_false -> org.hibernate.type.TrueFalseType@80dc82d
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration yes_no -> org.hibernate.type.YesNoType@37dafd9d
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration byte -> org.hibernate.type.ByteType@4bd16805
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration byte -> org.hibernate.type.ByteType@4bd16805
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@4bd16805
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration character -> org.hibernate.type.CharacterType@3dfdf61b
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration char -> org.hibernate.type.CharacterType@3dfdf61b
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@3dfdf61b
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration short -> org.hibernate.type.ShortType@239dfc75
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration short -> org.hibernate.type.ShortType@239dfc75
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.lang.Short -> org.hibernate.type.ShortType@239dfc75
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration integer -> org.hibernate.type.IntegerType@4643370c
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration int -> org.hibernate.type.IntegerType@4643370c
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@4643370c
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration long -> org.hibernate.type.LongType@98d2229
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration long -> org.hibernate.type.LongType@98d2229
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.lang.Long -> org.hibernate.type.LongType@98d2229
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration float -> org.hibernate.type.FloatType@1d22b5e4
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration float -> org.hibernate.type.FloatType@1d22b5e4
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1d22b5e4
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration double -> org.hibernate.type.DoubleType@7bd42b03
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration double -> org.hibernate.type.DoubleType@7bd42b03
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@7bd42b03
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@33702eab
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@33702eab
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration big_integer -> org.hibernate.type.BigIntegerType@2c45326c
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@2c45326c
+15:57:03.913+0900 [restartedMain] DEBUG org.hibernate.type.BasicTypeRegistry -
+			Adding type registration string -> org.hibernate.type.StringType@471d0aec

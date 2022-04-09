@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+	<th:block th:fragment="content">
+	
+	<!-- 데이터 목록 출력 -->
+	<table class="table table-striped">
+		<!-- 제목 -->
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">제목</th>
+				<th scope="col">작성자</th>
+				<th scope="col">작성일</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="" >
+				<!-- 글 번호 출력 -->
+				<th scope="row">
+					<!-- 상세보기 링크 -->
+					<a th:href="">
+					글 번호
+					</a>
+				</th>
+				<!-- 제목과 댓글수를 출력 -->
+				<td>제목 ---------------- 댓글수</td>
+				<!-- 작성자 이름과 이메일 출력 -->
+				<td>작성자 이름 <small>작성자 이메일</small> </td>
+				<!-- 작성일을 출력 -->
+				<td>작성일</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<!-- 검색 폼 -->
+	<nav class="navbar navbar-dark bg-dark">
+	  <form class="form-inline" action="/review/list" method="get" id="searchForm">
+	  	<div class="input-group">
+		  	<input type="hidden" name="page" value="1">
+		  	<div class="input-group-prepend">
+				<select class="custom-select" name="type">
+					<option th:selected="${pageRequestDTO.type == null}">-------</option>
+					<option value="t" th:selected="${pageRequestDTO.type=='t'}" >제목</option>
+					<option value="c" th:selected="${pageRequestDTO.type=='c'}" >내용</option>
+					<option value="w" th:selected="${pageRequestDTO.type=='w'}" >작성자</option>
+					<option value="tc" th:selected="${pageRequestDTO.type =='tc'}" >제목 +내용</option>
+					<option value="tcw" th:selected="${pageRequestDTO.type =='tcw'}" >제목 +내용 + 작성자</option>
+				</select>
+			</div>
+		  	
+		    <input class="form-control mr-sm-2" type="search" aria-label="Search" name="keyword" th:value="${pageRequestDTO.keyword}">
+
+		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </div>
+	  </form>
+	</nav>
+	
+	</th:block>
+</th:block>
+
+</html>

@@ -1,0 +1,27 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link href="/css/style.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="wrapper fadeInDown">
+		<div id="formContent">
+			<!-- Icon -->
+			<div class="fadeIn first">
+				<img src="/image/icon.png" height="100" width="100" id="icon" alt="User Icon" />
+			</div>
+
+			<!-- Login Form: post방식으로 보내면 spring security가 제공하는 로그인 로직을 탐-->
+			<form method="post">
+				<input type="text" id="login" class="fadeIn second" name="username" placeholder="아이디"> 
+				<input type="text" id="password" class="fadeIn third" name="password" placeholder="비밀번호"> 
+				<input type="submit" class="fadeIn fourth" value="Log In">
+			</form>
+
+			<!-- Remind Passowrd -->
+			<div id="formFooter">
+				<a class="underlineHover" href="#">비밀번호 찾기</a>
+			</div>
+		</div>
+	</div>
+</body>	

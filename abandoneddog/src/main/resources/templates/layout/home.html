@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+	<th:block th:fragment="content">
+
+		<div class="row row-cols-1 row-cols-md-3 cardList"> </div>
+		
+		<script th:inline="javascript">
+			$(document).ready(function() {
+				//댓글이 추가될 영역
+				var cardList = $(".cardList");
+				
+				$.getJSON('/openapi/abandoglist', function(arr){
+					var str = "";
+					
+					var urltest = "";
+					
+					//배열 순회
+					$.each(arr, function(idx, val) {
+						
+						urltest = val[1].photoURL;
+						
+						str += '<div class="col mb-4" style="width: 30rem;">';
+						str += '<div class="card h-100">';
+						str += '<img src="https://'+urltest+'" class="card-img-top">';
+						str += '<div class="card-body">';
+						str += '<h5 class="card-title">'+val[0].abandog_name+'</h5>';
+						str += '</div></div></div>';
+					})
+					
+					cardList.html(str);
+				});
+
+			});
+		</script>
+	</th:block>
+</th:block>

@@ -1,0 +1,19 @@
+00:27:53.251+0900 [HikariPool-22 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool -HikariPool-22 - Thread starvation or clock leap detected (housekeeper delta=2h38m59s733ms335µs600ns).
+00:30:50.902+0900 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:30:50.906+0900 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+00:30:50.947+0900 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -Completed initialization in 41 ms
+00:30:50.965+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /
+00:30:50.969+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to empty SecurityContext
+00:30:50.978+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter -Set SecurityContextHolder to anonymous SecurityContext
+00:30:50.979+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.session.SessionManagementFilter -Request requested invalid session id F07622095E3CC894C886B2F8B485897F
+00:30:51.015+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /] with attributes [permitAll]
+00:30:51.016+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /
+00:30:51.057+0900 [http-nio-8080-exec-1] INFO  kr.co.abandog.controller.PageController -시작 요청
+00:30:51.331+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store anonymous SecurityContext
+00:30:51.351+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store anonymous SecurityContext
+00:30:51.351+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+00:43:41.380+0900 [Thread-84] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+00:43:41.390+0900 [Thread-84] TRACE org.hibernate.type.spi.TypeConfiguration$Scope -Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@28b33f03] for TypeConfiguration
+00:43:41.391+0900 [Thread-84] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope -Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@5bce67bc] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@28b33f03]
+00:43:41.399+0900 [Thread-84] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-22 - Shutdown initiated...
+00:43:41.440+0900 [Thread-84] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-22 - Shutdown completed.
