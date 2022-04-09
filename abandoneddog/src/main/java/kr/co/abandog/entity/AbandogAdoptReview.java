@@ -12,19 +12,21 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @Table(name="abandog_adopt_review")
 @ToString
 @Getter
-@Builder
+//@Builder
+@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
 public class AbandogAdoptReview extends BaseEntity {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	@Column(name="review_num")
@@ -40,8 +42,6 @@ public class AbandogAdoptReview extends BaseEntity {
 	private String review_content;
 	@Column(name="review_file", length=100)
 	private String review_file;
-	@Column(name="review_count")
-	private Date review_datetime;
 	
     
 }

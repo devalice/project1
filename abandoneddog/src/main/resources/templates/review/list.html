@@ -4,12 +4,20 @@
 <th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
 	<th:block th:fragment="content">
 	
+	
+	<span>
+		<!-- 삽입 링크 -->
+		<a th:href="@{/review/register}">
+			<button type="button" class="btn btn-outline-info">REGISTER</button>
+		</a>
+	</span>
+	
 	<!-- 데이터 목록 출력 -->
 	<table class="table table-striped">
 		<!-- 제목 -->
 		<thead>
 			<tr>
-				<th scope="col">#</th>
+				<th scope="col">##</th>
 				<th scope="col">제목</th>
 				<th scope="col">작성자</th>
 				<th scope="col">작성일</th>
@@ -17,30 +25,31 @@
 		</thead>
 		
 		<tbody>
-			<tr th:each="" >
+			<tr th:each="dto : ${result.dtoList}" >
 				<!-- 글 번호 출력 -->
 				<th scope="row">
 					<!-- 상세보기 링크 -->
-					<a th:href="">
-					글 번호
+					<a th:href="@{/review/read(review_num = ${dto.review_num}, 
+										  page= ${result.page}, 
+										  type=${pageRequestDTO.type}, 
+										  keyword = ${pageRequestDTO.keyword})}">
+						[[${dto.review_num}]]
 					</a>
 				</th>
 				<!-- 제목과 댓글수를 출력 -->
-				<td>제목 ---------------- 댓글수</td>
+				<td>[[${dto.review_title}]]</td>
 				<!-- 작성자 이름과 이메일 출력 -->
-				<td>작성자 이름 <small>작성자 이메일</small> </td>
+				<td>[[${dto.member_name}]] <small>[[${dto.member_email}]]</small> </td>
 				<!-- 작성일을 출력 -->
-				<td>작성일</td>
+				<td>[[${#temporals.format(dto.inst_dtm, 'yyyy/MM/dd')}]]</td>
 			</tr>
 		</tbody>
 	</table>
 	
-	<!-- 검색 폼 -->
-	<nav class="navbar navbar-dark bg-dark">
-	  <form class="form-inline" action="/review/list" method="get" id="searchForm">
-	  	<div class="input-group">
-		  	<input type="hidden" name="page" value="1">
-		  	<div class="input-group-prepend">
+	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+	  <form class="form-inline" action="/review/list" method="get">
+		  	<input type="hidden" name="page" value = "1">
+			<div class="form-control mr-sm-2">
 				<select class="custom-select" name="type">
 					<option th:selected="${pageRequestDTO.type == null}">-------</option>
 					<option value="t" th:selected="${pageRequestDTO.type=='t'}" >제목</option>
@@ -51,12 +60,35 @@
 				</select>
 			</div>
 		  	
-		    <input class="form-control mr-sm-2" type="search" aria-label="Search" name="keyword" th:value="${pageRequestDTO.keyword}">
-
+		    <input class="form-control mr-sm-2" type="search" name="keyword" th:value="${pageRequestDTO.keyword}" aria-label="Search">
 		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	    </div>
 	  </form>
 	</nav>
+	
+
+	<!-- 페이지 번호 출력 -->
+	<ul class="pagination h-100 justify-content-center align-items-center">
+		<!-- 이전 -->
+		<li class="page-item " th:if="${result.prev}">
+			<a class="page-link" th:href="@{/review/list(page= ${result.start -1}
+			                                            ,type=${pageRequestDTO.type}
+			                                            ,keyword=${pageRequestDTO.keyword} )}" tabindex="-1">Previous</a>
+		</li>
+		<!-- 페이지 번호 - 현재 페이지 번호에는 링크를 설정하지 않음 -->
+		<li th:class=" 'page-item ' + ${result.page == page?'active':''} " th:each="page:${result.pageList}">
+			<a class="page-link" th:href="@{/review/list(page = ${page}
+			                                            ,type=${pageRequestDTO.type}
+			                                            ,keyword = ${pageRequestDTO.keyword})}">
+				[[${page}]]
+			</a>
+		</li>
+		<!-- 다음 -->
+		<li class="page-item" th:if="${result.next}">
+			<a class="page-link" th:href="@{/review/list(page= ${result.end + 1},
+			                                             type=${pageRequestDTO.type},
+			                                             keyword=${pageRequestDTO.keyword})}">Next</a>
+		</li>
+	</ul>
 	
 	</th:block>
 </th:block>

@@ -23,8 +23,8 @@ public interface AbandogAdoptReviewService {
 																.review_title(dto.getReview_title())
 																.review_content(dto.getReview_content())
 																.review_file(dto.getReview_file())
-																.review_datetime(dto.getReview_datetime())
 																.member(member)
+																.inst_dtm(dto.getInst_dtm())
 																.build();
 		return review;
 	}
@@ -35,9 +35,9 @@ public interface AbandogAdoptReviewService {
 														 .review_title(review.getReview_title())
 														 .review_content(review.getReview_content())
 														 .review_file(review.getReview_file())
-														 .review_datetime(review.getReview_datetime())
 														 .member_email(member.getMember_email())
 														 .member_name(member.getMember_name())
+														 .inst_dtm(review.getInst_dtm())
 														 .build();
 		
 		return dto;

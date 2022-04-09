@@ -1,5 +1,6 @@
 package kr.co.abandog.dto;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import kr.co.abandog.entity.Member;
@@ -16,7 +17,7 @@ public class AbandogAdoptReviewDTO {
 	private String review_title;
 	private String review_content;
 	private String review_file;
-	private Date review_datetime;
+	private LocalDateTime inst_dtm;
 	
 	//작성자 정보
 	private String member_email;

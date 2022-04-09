@@ -20,9 +20,13 @@ public class ReviewController {
 	
 	//pageRequestDTO: adoptreview.html에서 입력한 데이터값
 	@GetMapping("/list")
-	public String adoptreview(PageRequestDTO pageRequestDTO, Model model) {
+	public void adoptreview(PageRequestDTO pageRequestDTO, Model model) {
 		model.addAttribute("result", reviewService.getList(pageRequestDTO));
-		return "review/list";
+	}
+	
+	@GetMapping("/register")
+	public void adoptreviewRegistr() {
+		
 	}
 	
 }
