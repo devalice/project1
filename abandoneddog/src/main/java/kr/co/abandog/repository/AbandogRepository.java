@@ -47,5 +47,6 @@ public interface AbandogRepository extends JpaRepository<Abandog, Long>{
 	//유기견 아이디로 찾기
 	@Query("select d from Abandog d where d.animal_no = :animal_no")
 	public Abandog getAbandog(@Param("animal_no") String animal_no);
+	
 
 }

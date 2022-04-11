@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+	<th:block th:fragment="content">
+	
+	<h1 class="mt-4">게시물 수정</h1>
+	<form action="/review/modify" method="post">
+		
+		<!--페이지 번호, 검색 항목, 검색 키워드 숨김 -->
+		<input type="hidden" name="page" th:value="${requestDTO.page}">
+		<input type="hidden" name="type" th:value="${requestDTO.type}" >
+		<input type="hidden" name="keyword" th:value="${requestDTO.keyword}" >
+	
+		<div class="form-group">
+		<label>글번호</label>
+		<input type="text" class="form-control" name="review_num" th:value="${dto.review_num}" readonly >
+		</div>
+		
+		<div class="form-group">
+		<label>제목</label>
+		<input type="text" class="form-control" name="review_title" th:value="${dto.review_title}" >
+		</div>
+		
+		<div class="form-group">
+		<label>내용</label>
+		<textarea class="form-control" rows="5" name="review_content">[[${dto.review_content}]]</textarea>
+		</div>
+		
+		<div class="form-group">
+		<label>작성자</label>
+		<input type="text" class="form-control" name="member_name" th:value="${dto.member_name}" readonly>
+		</div>
+		
+		<div class="form-group">
+		<label>작성일</label>
+		<input type="text" class="form-control" name="inst_dtm" th:placeholder="${#temporals.format(dto.inst_dtm, 'yyyy/MM/dd HH:mm:ss')}" readonly>
+		</div>
+		
+		<div class="form-group">
+		<label >ModDate</label>
+		<input type="text" class="form-control" name="updt_dtm" th:placeholder="${#temporals.format(dto.updt_dtm, 'yyyy/MM/dd HH:mm:ss')}" readonly>
+		</div>
+	</form>
+	
+	<button type="button" class="btn btn-primary modifyBtn">수정</button>
+	<button type="button" class="btn btn-info listBtn">목록</button>
+	<button type="button" class="btn btn-danger removeBtn">삭제</button>
+	
+	<script th:inline="javascript">
+		var actionForm = $("form"); //form 태그 객체
+		
+		$(".removeBtn").click(function(){
+			if(!confirm("정말로 삭제하겠습니까")){
+				return;
+			}
+			actionForm.attr("action", "/review/remove").attr("method","post").submit();
+		});
+		
+		$(".modifyBtn").click(function() {
+			if(!confirm("수정하시겠습니까?")){
+				return;
+			}
+			actionForm.attr("action", "/review/modify").attr("method","post").submit();
+		});
+		
+		$(".listBtn").click(function() {
+			var page = $("input[name='page']");
+			var type = $("input[name='type']");
+			var keyword = $("input[name='keyword']");
+			
+			actionForm.empty(); //form 태그의 모든 내용을 지우고
+			
+			//목록 보기로 이동할 때 필요한 데이터를 폼에 삽입
+			actionForm.append(page);
+			actionForm.append(type);
+			actionForm.append(keyword);
+
+			//목록 보기로 이동
+			actionForm.attr("action", "/review/list").attr("method","get");
+			actionForm.submit();
+		})
+	</script>
+	
+	</th:block>
+</th:block>
+
+</html>

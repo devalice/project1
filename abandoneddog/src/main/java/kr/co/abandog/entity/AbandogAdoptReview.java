@@ -1,7 +1,5 @@
 package kr.co.abandog.entity;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -33,15 +31,18 @@ public class AbandogAdoptReview extends BaseEntity {
 	private Integer review_num;
 	@Column(name="review_title", length=50)
 	private String review_title;
-
+	@Column(name="review_content", length=500)
+	private String review_content;
 
 	@ManyToOne(fetch = FetchType.LAZY) 
     private Member member; 
 	
-	@Column(name="review_content", length=500)
-	private String review_content;
-	@Column(name="review_file", length=100)
-	private String review_file;
+	public void setReviewTitle(String review_title) {
+		this.review_title = review_title;
+	}
 	
-    
+	public void setReviewContent(String review_content) {
+		this.review_content = review_content;
+	}
+	
 }

@@ -16,8 +16,8 @@ public class AbandogAdoptReviewDTO {
 	private Integer review_num;
 	private String review_title;
 	private String review_content;
-	private String review_file;
 	private LocalDateTime inst_dtm;
+	private LocalDateTime updt_dtm;
 	
 	//작성자 정보
 	private String member_email;

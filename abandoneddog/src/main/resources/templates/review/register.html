@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
 	<th:block th:fragment="content">
-		<h1 class="mt-4">Board Register Page</h1>
+		<h1 class="mt-4" align="center">새글 작성</h1>
 		<form th:action="@{/review/register}" th:method="post">
 			<div class="form-group">
 			<label >제목</label>
-				<input type="text" class="form-control" name="title" placeholder="Enter Title">
+				<input type="text" class="form-control" name="review_title" placeholder="제목을 입력하세요">
 			</div>
 			<div class="form-group">
 				<label >내용</label>
-				<textarea class="form-control" rows="5" name="content"></textarea>
+				<textarea class="form-control" rows="5" name="review_content"></textarea>
+			</div>
+			<div class="form-group">
+				<input name="uploadFiles" type="file" accept="image/*" multiple />
+				<button class="uploadBtn" type="button">업로드</button>
+				<span style="font-size:10px; color: gray;">※첨부파일은 최대 3개까지 등록이 가능합니다.</span>
 			</div>
 			<div class="form-group">
 				<label >작성자 이메일</label>
-				<input type="email" class="form-control" name="writerEmail" placeholder="Writer Email ">
+				<input type="email" class="form-control" name="member_email" th:value="${member.member_email}" th:placeholder="${member.member_email}" readonly>
 			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" class="btn btn-primary">저장</button>
 		</form>
+		
+		
+		<script>
+		$('.uploadBtn').click(function( ) {
+			var formData = new FormData();
+			var inputFile = $("input[type='file']");
+			var files = inputFile[0].files;
+			
+			if(files.length < 1){
+				alert("업로드할 파일을 선택하지 않으셨습니다.");
+				return;
+			}else if(files.length > 3){
+				alert("업로드할 파일은 3개 이하여야 합니다.");
+				return;
+			}
+		
+			//선택한 파일들을 formData에 추가
+			for (var i = 0; i < 3; i++) {
+				console.log(files[i]);
+				formData.append("uploadFiles", files[i]);
+			}
+			
+			
+			
+			
+		});
+		</script>
 	</th:block>
 </th:block>

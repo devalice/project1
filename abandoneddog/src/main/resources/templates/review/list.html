@@ -30,40 +30,21 @@
 				<th scope="row">
 					<!-- 상세보기 링크 -->
 					<a th:href="@{/review/read(review_num = ${dto.review_num}, 
-										  page= ${result.page}, 
-										  type=${pageRequestDTO.type}, 
-										  keyword = ${pageRequestDTO.keyword})}">
+										       page= ${result.page},
+										       type=${pageRequestDTO.type}, 
+										       keyword = ${pageRequestDTO.keyword})}">
 						[[${dto.review_num}]]
 					</a>
 				</th>
-				<!-- 제목과 댓글수를 출력 -->
+				<!-- 제목 출력 -->
 				<td>[[${dto.review_title}]]</td>
 				<!-- 작성자 이름과 이메일 출력 -->
-				<td>[[${dto.member_name}]] <small>[[${dto.member_email}]]</small> </td>
+				<td>[[${dto.member_name}]] </td>
 				<!-- 작성일을 출력 -->
 				<td>[[${#temporals.format(dto.inst_dtm, 'yyyy/MM/dd')}]]</td>
 			</tr>
 		</tbody>
 	</table>
-	
-	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-	  <form class="form-inline" action="/review/list" method="get">
-		  	<input type="hidden" name="page" value = "1">
-			<div class="form-control mr-sm-2">
-				<select class="custom-select" name="type">
-					<option th:selected="${pageRequestDTO.type == null}">-------</option>
-					<option value="t" th:selected="${pageRequestDTO.type=='t'}" >제목</option>
-					<option value="c" th:selected="${pageRequestDTO.type=='c'}" >내용</option>
-					<option value="w" th:selected="${pageRequestDTO.type=='w'}" >작성자</option>
-					<option value="tc" th:selected="${pageRequestDTO.type =='tc'}" >제목 +내용</option>
-					<option value="tcw" th:selected="${pageRequestDTO.type =='tcw'}" >제목 +내용 + 작성자</option>
-				</select>
-			</div>
-		  	
-		    <input class="form-control mr-sm-2" type="search" name="keyword" th:value="${pageRequestDTO.keyword}" aria-label="Search">
-		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	  </form>
-	</nav>
 	
 
 	<!-- 페이지 번호 출력 -->
@@ -90,6 +71,56 @@
 		</li>
 	</ul>
 	
+	<!-- 검색 창 -->
+	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+	  <form class="form-inline" action="/review/list" method="get">
+		  	<input type="hidden" name="page" value = "1">
+			<div class="form-control mr-sm-2">
+				<select class="custom-select" name="type">
+					<option th:selected="${pageRequestDTO.type == null}">-------</option>
+					<option value="t" th:selected="${pageRequestDTO.type=='t'}" >제목</option>
+					<option value="c" th:selected="${pageRequestDTO.type=='c'}" >내용</option>
+					<option value="w" th:selected="${pageRequestDTO.type=='w'}" >작성자</option>
+					<option value="tc" th:selected="${pageRequestDTO.type =='tc'}" >제목 +내용</option>
+					<option value="tcw" th:selected="${pageRequestDTO.type =='tcw'}" >제목 +내용 + 작성자</option>
+				</select>
+			</div>
+		  	
+		    <input class="form-control mr-sm-2" type="search" name="keyword" th:value="${pageRequestDTO.keyword}" aria-label="Search">
+		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	  </form>
+	</nav>
+	
+	
+	<!-- 대화 상자 -->
+	<div class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">완료</h5>
+						<button type="button" class="close" data-dismiss="modal" arialabel="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+				</div>
+				<div class="modal-body">
+					<p>[[${msg}]]</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" datadismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script th:inline="javascript">
+		var msg = [[${msg}]];
+		console.log(msg);
+		
+		if(msg){
+			$(".modal").modal();
+		}
+	</script>
+
 	</th:block>
 </th:block>
 

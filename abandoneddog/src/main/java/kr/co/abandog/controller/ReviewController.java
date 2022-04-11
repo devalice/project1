@@ -1,10 +1,16 @@
 package kr.co.abandog.controller;
 
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import kr.co.abandog.dto.AbandogAdoptReviewDTO;
+import kr.co.abandog.dto.MemberDTO;
 import kr.co.abandog.dto.PageRequestDTO;
 import kr.co.abandog.service.AbandogAdoptReviewService;
 import lombok.RequiredArgsConstructor;
@@ -18,15 +24,58 @@ public class ReviewController {
 	
 	private final AbandogAdoptReviewService reviewService;
 	
-	//pageRequestDTO: adoptreview.html에서 입력한 데이터값
 	@GetMapping("/list")
-	public void adoptreview(PageRequestDTO pageRequestDTO, Model model) {
+	public void adoptReview(PageRequestDTO pageRequestDTO, Model model) {
+		log.info("list get...");
 		model.addAttribute("result", reviewService.getList(pageRequestDTO));
 	}
 	
-	@GetMapping("/register")
-	public void adoptreviewRegistr() {
+	@GetMapping({"/read","modify"})
+	public void adoptReviewRead(@AuthenticationPrincipal MemberDTO memberDTO,
+								@ModelAttribute("requestDTO") PageRequestDTO pageRequestDTO,
+								Integer review_num,
+								Model model) {
 		
+		AbandogAdoptReviewDTO dto = reviewService.get(review_num);
+		model.addAttribute("dto" , dto);
+		model.addAttribute("member", memberDTO);
+	}
+	
+	@PostMapping("/modify")
+	public String adoptReviewModify(AbandogAdoptReviewDTO dto,
+								    @ModelAttribute("requestDTO") PageRequestDTO requestDTO,
+								    RedirectAttributes rattr) {
+		
+		log.info("modify post...");
+		
+		reviewService.reviewModify(dto);
+		rattr.addAttribute("page", requestDTO.getPage());
+		rattr.addAttribute("type", requestDTO.getType());
+		rattr.addAttribute("keyword", requestDTO.getKeyword());
+		rattr.addAttribute("review_num", dto.getReview_num());
+		
+		return "redirect:/review/read";
+	}
+	
+	@GetMapping("/register")
+	public void adoptReviewRegistr(@AuthenticationPrincipal MemberDTO memberDTO, Model model) {
+		log.info("regiser get...");
+		model.addAttribute("member", memberDTO);
+	}
+	
+	@PostMapping("/register")
+	public String adoptReviewRegistr(AbandogAdoptReviewDTO dto, RedirectAttributes rattr) {
+		Integer review_num = reviewService.reviewRegister(dto);
+		rattr.addFlashAttribute("msg", review_num + "등록");
+		return "redirect:/review/list";		
+	}
+	
+	@PostMapping("/remove")
+	public String adoptReviewRemove(Integer review_num, RedirectAttributes rattr) {
+		reviewService.reviewRemove(review_num);
+		
+		rattr.addFlashAttribute("msg", review_num + "삭제");
+		return "redirect:/review/list";
 	}
 	
 }

@@ -1,8 +1,8 @@
 package kr.co.abandog;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +12,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import kr.co.abandog.dto.AbandogDTO;
 import kr.co.abandog.dto.AbandogImgDTO;
 import kr.co.abandog.entity.Abandog;
+import kr.co.abandog.entity.AbandogAdoptReview;
 import kr.co.abandog.entity.AbandogImg;
 import kr.co.abandog.entity.Member;
 import kr.co.abandog.entity.MemberRole;
+import kr.co.abandog.repository.AbandogAdoptReviewRepository;
 import kr.co.abandog.repository.AbandogImgRepository;
 import kr.co.abandog.repository.AbandogRepository;
 import kr.co.abandog.repository.AbandogStateCDRepository;
@@ -25,6 +27,9 @@ import kr.co.abandog.repository.MemberRepository;
 public class RepositoryTest {
 	@Autowired
 	private AbandogRepository abandogRepository;
+	
+	@Autowired
+	private AbandogAdoptReviewRepository abandogReviewRepository;
 	
 	@Autowired
 	private AbandogImgRepository abandogImgRepository;
@@ -61,6 +66,23 @@ public class RepositoryTest {
 		return abandogImgDTO;
 	}
 	
+	//게시글 임시 데이터 insert
+	@Test
+	public void test() {
+		
+		for(int i=100; i<200; i++) {
+			
+			Optional<Member> member = memberRepository.findByEmail("imaboss@naver.com");
+			
+			AbandogAdoptReview review = AbandogAdoptReview.builder().review_title(i+ "번째 강아지입니다.")
+																	.review_content(i+"번째 강아지는 귀엽습니다.")
+																	.member(member.get())
+																	.build();
+			abandogReviewRepository.save(review);
+		}
+		
+	}
+	
 	//@Test
 	public void test1() {
 		abandogRepository.mergeAbandog("W", 5, "2022-01-13", 
@@ -70,7 +92,7 @@ public class RepositoryTest {
 	//@Test
 	public void test2() {
 		
-		Member member = Member.builder().member_email("gkstjfgml@naver.com")
+		Member member = Member.builder().member_email("imaboss@naver.com")
 										.admin_yn("N")
 										.member_pw(passwordEncoder.encode("1234"))
 										.build();
@@ -80,7 +102,7 @@ public class RepositoryTest {
 		memberRepository.save(member);
 	}
 	
-	@Test
+	//@Test
 	public void test3() {
 		List<Object []> abandog = abandogRepository.getAbandogList();
 		
