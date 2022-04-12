@@ -22,7 +22,6 @@ public class AbandogDTO {
 	private String abandog_date;
 	private String abandog_location;
 	private String abandog_guardian;
-	private String abandog_image;
 	private String animal_no;
 	private String member_email; //유기견 관리중인 회원 정보
 	private String state_cd; //상태

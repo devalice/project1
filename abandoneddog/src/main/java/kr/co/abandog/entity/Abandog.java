@@ -37,8 +37,8 @@ public class Abandog extends BaseEntity implements Serializable{
 	@Column(name="abandog_age")
 	private Integer abandog_age;
 	
-	@Column(name="aban_dog_gender", length=1, columnDefinition = "char")
-	private String aban_dog_gender;
+	@Column(name="abandog_gender", length=1, columnDefinition = "char")
+	private String abandog_gender;
 	
 	@Column(name="abandog_date", length=11)
 	private String abandog_date; //입소 날짜
@@ -48,9 +48,6 @@ public class Abandog extends BaseEntity implements Serializable{
 	
 	@Column(name="abandog_guardian", length=30)
 	private String abandog_guardian;
-	
-	@Column(name="abandog_image", length=200)
-	private String abandog_image;
 	
 	@Column(name="animal_no", unique=true)
 	private String animal_no; //서울시 보호소 데이터 pk

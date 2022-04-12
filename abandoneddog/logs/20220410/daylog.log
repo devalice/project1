@@ -1,0 +1,157 @@
+01:28:48.952+0900 [HikariPool-20 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool -HikariPool-20 - Thread starvation or clock leap detected (housekeeper delta=2h54m17s540ms523µs800ns).
+01:37:50.761+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:37:50.781+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to empty SecurityContext
+01:37:50.788+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter -Set SecurityContextHolder to anonymous SecurityContext
+01:37:50.790+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.session.SessionManagementFilter -Request requested invalid session id 464776F0644E3792E592AA1FAB772B94
+01:37:50.816+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Failed to authorize filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:37:50.864+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.savedrequest.HttpSessionRequestCache -Saved request http://localhost:8080/review/register to session
+01:37:50.869+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.DefaultRedirectStrategy -Redirecting to http://localhost:8080/login/login
+01:37:50.871+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store empty SecurityContext
+01:37:50.873+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store empty SecurityContext
+01:37:50.873+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:37:50.895+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /login/login
+01:37:50.896+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to empty SecurityContext
+01:37:50.896+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter -Set SecurityContextHolder to anonymous SecurityContext
+01:37:50.907+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /login/login] with attributes [permitAll]
+01:37:50.908+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /login/login
+01:37:51.070+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store anonymous SecurityContext
+01:37:51.078+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store anonymous SecurityContext
+01:37:51.078+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:37:51.251+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /image/icon.png
+01:37:51.252+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to empty SecurityContext
+01:37:51.251+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /css/style.css
+01:37:51.253+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to empty SecurityContext
+01:37:51.253+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter -Set SecurityContextHolder to anonymous SecurityContext
+01:37:51.253+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.authentication.AnonymousAuthenticationFilter -Set SecurityContextHolder to anonymous SecurityContext
+01:37:51.254+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /image/icon.png] with attributes [permitAll]
+01:37:51.254+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /image/icon.png
+01:37:51.254+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /css/style.css] with attributes [permitAll]
+01:37:51.255+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /css/style.css
+01:37:51.300+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store anonymous SecurityContext
+01:37:51.300+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store anonymous SecurityContext
+01:37:51.301+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store anonymous SecurityContext
+01:37:51.301+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:37:51.306+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Did not store anonymous SecurityContext
+01:37:51.306+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:37:59.255+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy -Securing POST /login/login
+01:37:59.255+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to empty SecurityContext
+01:37:59.275+0900 [http-nio-8080-exec-4] INFO  kr.co.abandog.service.MemberUserDetailService -loadByUserNamegkstjfgml@naver.com
+01:37:59.446+0900 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL -
+    select
+        member0_.member_email as member_e1_11_,
+        member0_.del_dtm as del_dtm2_11_,
+        member0_.inst_dtm as inst_dtm3_11_,
+        member0_.updt_dtm as updt_dtm4_11_,
+        member0_.admin_yn as admin_yn5_11_,
+        member0_.member_address as member_a6_11_,
+        member0_.member_age as member_a7_11_,
+        member0_.member_gender as member_g8_11_,
+        member0_.member_name as member_n9_11_,
+        member0_.member_phone as member_10_11_,
+        member0_.member_pw as member_11_11_,
+        roleset1_.member_member_email as member_m1_12_0__,
+        roleset1_.role_set as role_set2_12_0__ 
+    from
+        member member0_ 
+    left outer join
+        member_role_set roleset1_ 
+            on member0_.member_email=roleset1_.member_member_email 
+    where
+        member0_.member_email=?
+01:37:59.515+0900 [http-nio-8080-exec-4] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [VARCHAR] - [gkstjfgml@naver.com]
+01:37:59.891+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.authentication.session.ChangeSessionIdAuthenticationStrategy -Changed session id from 65DDF7E478C01B5CACC6E3AC8FF1594A
+01:37:59.892+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter -Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]
+01:37:59.893+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.DefaultRedirectStrategy -Redirecting to http://localhost:8080/review/register
+01:37:59.893+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@59024b72]
+01:37:59.897+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@59024b72]
+01:37:59.898+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:37:59.915+0900 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:37:59.915+0900 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:37:59.915+0900 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:37:59.916+0900 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.savedrequest.HttpSessionRequestCache -Loaded matching saved request http://localhost:8080/review/register
+01:37:59.921+0900 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:37:59.921+0900 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/register
+01:37:59.926+0900 [http-nio-8080-exec-6] INFO  kr.co.abandog.controller.ReviewController -regiser get...
+01:37:59.997+0900 [http-nio-8080-exec-6] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:38:09.877+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy -Securing POST /uploadajax
+01:38:09.879+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:09.879+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:09.880+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [POST /uploadajax] with attributes [authenticated]
+01:38:09.880+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy -Secured POST /uploadajax
+01:38:10.700+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:38:10.704+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy -Securing POST /error
+01:38:10.705+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:10.705+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:10.705+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy -Secured POST /error
+01:38:10.806+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:38:12.149+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Securing POST /uploadajax
+01:38:12.150+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:12.150+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:12.152+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [POST /uploadajax] with attributes [authenticated]
+01:38:12.152+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Secured POST /uploadajax
+01:38:12.181+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:38:12.182+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Securing POST /error
+01:38:12.182+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:12.182+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:12.183+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Secured POST /error
+01:38:12.190+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:38:33.698+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:38:33.698+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:33.700+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:38:33.703+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:38:33.703+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/register
+01:38:33.703+0900 [http-nio-8080-exec-3] INFO  kr.co.abandog.controller.ReviewController -regiser get...
+01:38:33.731+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:41:37.739+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:41:37.739+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:41:37.739+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:41:37.740+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:41:37.740+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/register
+01:41:37.742+0900 [http-nio-8080-exec-4] INFO  kr.co.abandog.controller.ReviewController -regiser get...
+01:41:37.765+0900 [http-nio-8080-exec-4] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:42:05.279+0900 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:42:05.280+0900 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:42:05.280+0900 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:42:05.280+0900 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:42:05.281+0900 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/register
+01:42:05.281+0900 [http-nio-8080-exec-8] INFO  kr.co.abandog.controller.ReviewController -regiser get...
+01:42:05.311+0900 [http-nio-8080-exec-8] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:42:42.935+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:42:42.935+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:42:42.935+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:42:42.936+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:42:42.936+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/register
+01:42:42.937+0900 [http-nio-8080-exec-10] INFO  kr.co.abandog.controller.ReviewController -regiser get...
+01:42:43.047+0900 [http-nio-8080-exec-10] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:42:54.203+0900 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:42:54.204+0900 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:42:54.204+0900 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:42:54.233+0900 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:42:54.235+0900 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/register
+01:42:54.237+0900 [http-nio-8080-exec-2] INFO  kr.co.abandog.controller.ReviewController -regiser get...
+01:42:54.280+0900 [http-nio-8080-exec-2] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:43:31.479+0900 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:43:31.479+0900 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:43:31.479+0900 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:43:31.481+0900 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:43:31.481+0900 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/register
+01:43:31.483+0900 [http-nio-8080-exec-7] INFO  kr.co.abandog.controller.ReviewController -regiser get...
+01:43:31.520+0900 [http-nio-8080-exec-7] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:45:25.097+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:45:25.098+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:45:25.098+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:45:25.098+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:45:25.098+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/register
+01:45:25.100+0900 [http-nio-8080-exec-9] INFO  kr.co.abandog.controller.ReviewController -regiser get...
+01:45:25.202+0900 [http-nio-8080-exec-9] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+01:47:43.362+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/register
+01:47:43.364+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:47:43.364+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=65DDF7E478C01B5CACC6E3AC8FF1594A], Granted Authorities=[ROLE_USER]]]
+01:47:43.366+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/register] with attributes [hasRole('ROLE_USER')]
+01:47:43.366+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/register
+01:47:43.370+0900 [http-nio-8080-exec-3] INFO  kr.co.abandog.controller.ReviewController -regiser get...
+01:47:43.428+0900 [http-nio-8080-exec-3] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Cleared SecurityContextHolder to complete request
+02:01:27.257+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -Application shutdown requested.
+02:01:28.119+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+02:01:28.174+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-20 - Shutdown initiated...
+02:01:28.217+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-20 - Shutdown completed.

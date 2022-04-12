@@ -12,16 +12,6 @@ import kr.co.abandog.entity.Member;
 
 public interface AbandogService {
 	
-	//호출 가능한 총 갯수
-	public Long abandogCnt(String json);
-	
-	//서울시 유기견 데이터 DB 저장
-	public String abandogput(String json);
-	
-	//서울시 유기견 이미지 DB 저장
-	public String abandogImgput(String json);
-	
-	
 	default Abandog dtoToEntity(AbandogDTO dto) {
 		Member member = Member.builder()
 							  .member_email(dto.getMember_email())
@@ -38,7 +28,7 @@ public interface AbandogService {
 		Abandog abandog = Abandog.builder()
 								 .abandog_name(dto.getAbandog_name())
 								 .abandog_age(dto.getAbandog_age())
-								 .aban_dog_gender(dto.getAban_dog_gender())
+								 .abandog_gender(dto.getAban_dog_gender())
 								 .abandog_date(dto.getAbandog_date())
 								 .abandog_location(dto.getAbandog_location())
 								 .abandog_guardian(member.getMember_name())
@@ -73,9 +63,17 @@ public interface AbandogService {
 		return abandogImgDTO;
 	}
 	
-	
 	//유기견 리스트 가져오기
 	public List<Object []> getList();
+	
+	//호출 가능한 총 갯수
+	public Long abandogCnt(String json);
+	
+	//서울시 유기견 데이터 DB 저장
+	public String abandogput(String json);
+	
+	//서울시 유기견 이미지 DB 저장
+	public String abandogImgput(String json);
 	
 
 }

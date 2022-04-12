@@ -1,0 +1,586 @@
+22:48:32.023+0900 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:48:34.383+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login?error']
+22:48:34.385+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:48:34.386+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:48:34.387+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/']
+22:48:34.388+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+22:48:34.388+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/layout/home']
+22:48:34.389+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/image/*']
+22:48:34.389+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/list']
+22:48:34.392+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/css/*']
+22:48:34.394+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/test']
+22:48:34.394+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/openapi/*']
+22:48:34.406+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [hasRole('ROLE_USER')] for Ant [pattern='/review/*']
+22:48:34.426+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [authenticated] for any request
+22:48:34.490+0900 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain -Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ef5e46a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ae93e38, org.springframework.security.web.header.HeaderWriterFilter@7e9b68c5, org.springframework.security.web.authentication.logout.LogoutFilter@2565b097, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@58885a2e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17d5138, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@111ae918, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b7e2a88, org.springframework.security.web.session.SessionManagementFilter@14ca4b4d, org.springframework.security.web.access.ExceptionTranslationFilter@2b1818d1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11c82829]
+22:48:34.641+0900 [main] INFO  kr.co.abandog.BoardTest -Started BoardTest in 9.084 seconds (JVM running for 11.189)
+22:48:34.932+0900 [main] INFO  kr.co.abandog.service.AbandogAdoptReviewServiceImpl -getList 호출
+22:48:34.949+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -searchPage 메서드 호출
+22:48:35.009+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -review_num: abandogAdoptReview.review_num
+22:48:35.010+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -비교 시작
+22:48:35.010+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -정렬 시작
+22:48:35.011+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -prop: review_num
+22:48:35.012+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -그룹화
+22:48:35.013+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -데이터 가져오기
+22:48:35.049+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        abandogado0_.review_num as review_n1_3_0_,
+        member1_.member_email as member_e1_10_1_,
+        abandogado0_.del_dtm as del_dtm2_3_0_,
+        abandogado0_.inst_dtm as inst_dtm3_3_0_,
+        abandogado0_.updt_dtm as updt_dtm4_3_0_,
+        abandogado0_.member_member_email as member_m9_3_0_,
+        abandogado0_.review_content as review_c5_3_0_,
+        abandogado0_.review_count as review_c6_3_0_,
+        abandogado0_.review_file as review_f7_3_0_,
+        abandogado0_.review_title as review_t8_3_0_,
+        member1_.del_dtm as del_dtm2_10_1_,
+        member1_.inst_dtm as inst_dtm3_10_1_,
+        member1_.updt_dtm as updt_dtm4_10_1_,
+        member1_.admin_yn as admin_yn5_10_1_,
+        member1_.member_address as member_a6_10_1_,
+        member1_.member_age as member_a7_10_1_,
+        member1_.member_gender as member_g8_10_1_,
+        member1_.member_name as member_n9_10_1_,
+        member1_.member_phone as member_10_10_1_,
+        member1_.member_pw as member_11_10_1_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    inner join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>? 
+    group by
+        abandogado0_.review_num 
+    order by
+        abandogado0_.review_num desc limit ?
+22:48:35.052+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:48:35.058+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -리턴
+22:48:35.065+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        count(distinct abandogado0_.review_num) as col_0_0_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    inner join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>?
+22:48:35.065+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:48:35.129+0900 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+22:48:35.137+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
+22:48:35.148+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.
+22:55:10.391+0900 [Thread-15] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+22:55:10.420+0900 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown initiated...
+22:55:10.438+0900 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown completed.
+22:55:10.984+0900 [restartedMain] INFO  kr.co.abandog.AbandoneddogApplication -Starting AbandoneddogApplication using Java 11.0.12 on LAPTOP-DQ0S1TQE with PID 5616 (C:\Users\한설희\git\project1\abandoneddog\bin\main started by han in C:\Users\한설희\git\project1\abandoneddog)
+22:55:10.985+0900 [restartedMain] INFO  kr.co.abandog.AbandoneddogApplication -No active profile set, falling back to default profiles: default
+22:55:11.217+0900 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22:55:11.262+0900 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 44 ms. Found 11 JPA repository interfaces.
+22:55:11.391+0900 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+22:55:11.391+0900 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol -Initializing ProtocolHandler ["http-nio-8080"]
+22:55:11.391+0900 [restartedMain] INFO  org.apache.catalina.core.StandardService -Starting service [Tomcat]
+22:55:11.391+0900 [restartedMain] INFO  org.apache.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.56]
+22:55:11.414+0900 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+22:55:11.414+0900 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 418 ms
+22:55:11.458+0900 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+22:55:11.467+0900 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Starting...
+22:55:11.488+0900 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Start completed.
+22:55:11.489+0900 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22:55:11.628+0900 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22:55:11.629+0900 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+22:55:11.754+0900 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:55:12.095+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login?error']
+22:55:12.095+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:55:12.095+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:55:12.095+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/']
+22:55:12.095+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+22:55:12.096+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/layout/home']
+22:55:12.096+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/image/*']
+22:55:12.096+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/list']
+22:55:12.096+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/css/*']
+22:55:12.096+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/test']
+22:55:12.096+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/openapi/*']
+22:55:12.096+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [hasRole('ROLE_USER')] for Ant [pattern='/review/*']
+22:55:12.096+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [authenticated] for any request
+22:55:12.098+0900 [restartedMain] INFO  org.springframework.security.web.DefaultSecurityFilterChain -Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13c70026, org.springframework.security.web.context.SecurityContextPersistenceFilter@6049a81b, org.springframework.security.web.header.HeaderWriterFilter@4dd2fc24, org.springframework.security.web.authentication.logout.LogoutFilter@68aad9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@21a8cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6216ac01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@387f4fbb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6281fdc4, org.springframework.security.web.session.SessionManagementFilter@25a61017, org.springframework.security.web.access.ExceptionTranslationFilter@197375d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29bdf80]
+22:55:12.110+0900 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer -LiveReload server is running on port 35729
+22:55:12.120+0900 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol -Starting ProtocolHandler ["http-nio-8080"]
+22:55:12.122+0900 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+22:55:12.141+0900 [restartedMain] INFO  kr.co.abandog.AbandoneddogApplication -Started AbandoneddogApplication in 1.216 seconds (JVM running for 3895.033)
+22:55:12.142+0900 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+22:55:27.081+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Neither @ContextConfiguration nor @ContextHierarchy found for test class [kr.co.abandog.BoardTest], using SpringBootContextLoader
+22:55:27.097+0900 [main] INFO  org.springframework.test.context.support.AbstractContextLoader -Could not detect default resource locations for test class [kr.co.abandog.BoardTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:55:27.098+0900 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -Could not detect default configuration classes for test class [kr.co.abandog.BoardTest]: BoardTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:55:27.215+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Found @SpringBootConfiguration kr.co.abandog.AbandoneddogApplication for test class kr.co.abandog.BoardTest
+22:55:27.342+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+22:55:27.370+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5dc3fcb7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c4c0b41, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@76911385, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5467eea4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@160396db, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a799159, org.springframework.test.context.transaction.TransactionalTestExecutionListener@40ab8a8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ff37443, org.springframework.test.context.event.EventPublishingTestExecutionListener@65cc8228, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@53093491, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@21719a0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76b224cd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77ee25f1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6dd93a21, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@57b9e423]
+22:55:27.744+0900 [main] INFO  kr.co.abandog.BoardTest -Starting BoardTest using Java 11.0.12 on LAPTOP-DQ0S1TQE with PID 7608 (started by han in C:\Users\한설희\git\project1\abandoneddog)
+22:55:27.747+0900 [main] INFO  kr.co.abandog.BoardTest -No active profile set, falling back to default profiles: default
+22:55:29.069+0900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22:55:29.239+0900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 159 ms. Found 11 JPA repository interfaces.
+22:55:30.178+0900 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+22:55:30.258+0900 [main] INFO  org.hibernate.Version -HHH000412: Hibernate ORM core version 5.6.4.Final
+22:55:30.502+0900 [main] INFO  org.hibernate.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22:55:31.066+0900 [main] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Starting...
+22:55:31.529+0900 [main] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Start completed.
+22:55:31.578+0900 [main] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22:55:32.814+0900 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22:55:32.824+0900 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+22:55:33.635+0900 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:55:35.813+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login?error']
+22:55:35.814+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:55:35.815+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:55:35.815+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/']
+22:55:35.815+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+22:55:35.815+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/layout/home']
+22:55:35.816+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/image/*']
+22:55:35.816+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/list']
+22:55:35.816+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/css/*']
+22:55:35.816+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/test']
+22:55:35.816+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/openapi/*']
+22:55:35.816+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [hasRole('ROLE_USER')] for Ant [pattern='/review/*']
+22:55:35.818+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [authenticated] for any request
+22:55:35.847+0900 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain -Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11c82829, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f63219e, org.springframework.security.web.header.HeaderWriterFilter@68f1e261, org.springframework.security.web.authentication.logout.LogoutFilter@1f748d43, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5d956649, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1923301a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d73aa17, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34c21c34, org.springframework.security.web.session.SessionManagementFilter@dcc7d1c, org.springframework.security.web.access.ExceptionTranslationFilter@38fc2c39, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ec63b9a]
+22:55:36.021+0900 [main] INFO  kr.co.abandog.BoardTest -Started BoardTest in 8.595 seconds (JVM running for 10.609)
+22:55:36.248+0900 [main] INFO  kr.co.abandog.service.AbandogAdoptReviewServiceImpl -getList 호출
+22:55:36.275+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -searchPage 메서드 호출
+22:55:36.327+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -review_num: abandogAdoptReview.review_num
+22:55:36.328+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -비교 시작
+22:55:36.329+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -정렬 시작
+22:55:36.329+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -prop: review_num
+22:55:36.330+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -그룹화
+22:55:36.331+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -데이터 가져오기
+22:55:36.373+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        abandogado0_.review_num as review_n1_3_0_,
+        member1_.member_email as member_e1_10_1_,
+        abandogado0_.del_dtm as del_dtm2_3_0_,
+        abandogado0_.inst_dtm as inst_dtm3_3_0_,
+        abandogado0_.updt_dtm as updt_dtm4_3_0_,
+        abandogado0_.member_member_email as member_m9_3_0_,
+        abandogado0_.review_content as review_c5_3_0_,
+        abandogado0_.review_count as review_c6_3_0_,
+        abandogado0_.review_file as review_f7_3_0_,
+        abandogado0_.review_title as review_t8_3_0_,
+        member1_.del_dtm as del_dtm2_10_1_,
+        member1_.inst_dtm as inst_dtm3_10_1_,
+        member1_.updt_dtm as updt_dtm4_10_1_,
+        member1_.admin_yn as admin_yn5_10_1_,
+        member1_.member_address as member_a6_10_1_,
+        member1_.member_age as member_a7_10_1_,
+        member1_.member_gender as member_g8_10_1_,
+        member1_.member_name as member_n9_10_1_,
+        member1_.member_phone as member_10_10_1_,
+        member1_.member_pw as member_11_10_1_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    left outer join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>? 
+    group by
+        abandogado0_.review_num 
+    order by
+        abandogado0_.review_num desc limit ?
+22:55:36.377+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:55:36.400+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -리턴
+22:55:36.407+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        count(distinct abandogado0_.review_num) as col_0_0_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    left outer join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>?
+22:55:36.408+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:55:36.479+0900 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+22:55:36.483+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
+22:55:36.498+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.
+22:57:01.442+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Neither @ContextConfiguration nor @ContextHierarchy found for test class [kr.co.abandog.BoardTest], using SpringBootContextLoader
+22:57:01.450+0900 [main] INFO  org.springframework.test.context.support.AbstractContextLoader -Could not detect default resource locations for test class [kr.co.abandog.BoardTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:57:01.451+0900 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -Could not detect default configuration classes for test class [kr.co.abandog.BoardTest]: BoardTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:57:01.601+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Found @SpringBootConfiguration kr.co.abandog.AbandoneddogApplication for test class kr.co.abandog.BoardTest
+22:57:01.719+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+22:57:01.756+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5dc3fcb7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c4c0b41, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@76911385, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5467eea4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@160396db, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a799159, org.springframework.test.context.transaction.TransactionalTestExecutionListener@40ab8a8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ff37443, org.springframework.test.context.event.EventPublishingTestExecutionListener@65cc8228, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@53093491, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@21719a0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76b224cd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77ee25f1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6dd93a21, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@57b9e423]
+22:57:02.155+0900 [main] INFO  kr.co.abandog.BoardTest -Starting BoardTest using Java 11.0.12 on LAPTOP-DQ0S1TQE with PID 7036 (started by han in C:\Users\한설희\git\project1\abandoneddog)
+22:57:02.162+0900 [main] INFO  kr.co.abandog.BoardTest -No active profile set, falling back to default profiles: default
+22:57:03.784+0900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22:57:03.977+0900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 169 ms. Found 11 JPA repository interfaces.
+22:57:05.276+0900 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+22:57:05.344+0900 [main] INFO  org.hibernate.Version -HHH000412: Hibernate ORM core version 5.6.4.Final
+22:57:05.578+0900 [main] INFO  org.hibernate.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22:57:06.247+0900 [main] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Starting...
+22:57:06.852+0900 [main] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Start completed.
+22:57:06.901+0900 [main] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22:57:08.223+0900 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22:57:08.231+0900 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+22:57:08.844+0900 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:57:10.502+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login?error']
+22:57:10.503+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:57:10.504+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:57:10.504+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/']
+22:57:10.504+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+22:57:10.504+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/layout/home']
+22:57:10.504+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/image/*']
+22:57:10.505+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/list']
+22:57:10.505+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/css/*']
+22:57:10.505+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/test']
+22:57:10.506+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/openapi/*']
+22:57:10.506+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [hasRole('ROLE_USER')] for Ant [pattern='/review/*']
+22:57:10.508+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [authenticated] for any request
+22:57:10.555+0900 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain -Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@466d6ea5, org.springframework.security.web.context.SecurityContextPersistenceFilter@67fdc1e9, org.springframework.security.web.header.HeaderWriterFilter@369958b0, org.springframework.security.web.authentication.logout.LogoutFilter@71549247, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@796434a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fe08, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@650929dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52db9036, org.springframework.security.web.session.SessionManagementFilter@482c8db4, org.springframework.security.web.access.ExceptionTranslationFilter@6eaa5458, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2eebb07]
+22:57:10.681+0900 [main] INFO  kr.co.abandog.BoardTest -Started BoardTest in 8.883 seconds (JVM running for 11.293)
+22:57:10.923+0900 [main] INFO  kr.co.abandog.service.AbandogAdoptReviewServiceImpl -getList 호출
+22:57:10.953+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -searchPage 메서드 호출
+22:57:11.000+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -review_num: abandogAdoptReview.review_num
+22:57:11.001+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -비교 시작
+22:57:11.002+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -정렬 시작
+22:57:11.003+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -prop: review_num
+22:57:11.005+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -그룹화
+22:57:11.005+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -데이터 가져오기
+22:57:11.036+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        abandogado0_.review_num as review_n1_3_0_,
+        member1_.member_email as member_e1_10_1_,
+        abandogado0_.del_dtm as del_dtm2_3_0_,
+        abandogado0_.inst_dtm as inst_dtm3_3_0_,
+        abandogado0_.updt_dtm as updt_dtm4_3_0_,
+        abandogado0_.member_member_email as member_m9_3_0_,
+        abandogado0_.review_content as review_c5_3_0_,
+        abandogado0_.review_count as review_c6_3_0_,
+        abandogado0_.review_file as review_f7_3_0_,
+        abandogado0_.review_title as review_t8_3_0_,
+        member1_.del_dtm as del_dtm2_10_1_,
+        member1_.inst_dtm as inst_dtm3_10_1_,
+        member1_.updt_dtm as updt_dtm4_10_1_,
+        member1_.admin_yn as admin_yn5_10_1_,
+        member1_.member_address as member_a6_10_1_,
+        member1_.member_age as member_a7_10_1_,
+        member1_.member_gender as member_g8_10_1_,
+        member1_.member_name as member_n9_10_1_,
+        member1_.member_phone as member_10_10_1_,
+        member1_.member_pw as member_11_10_1_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    left outer join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>? 
+    group by
+        abandogado0_.review_num 
+    order by
+        abandogado0_.review_num desc limit ?
+22:57:11.040+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:57:11.062+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -리턴
+22:57:11.068+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        count(distinct abandogado0_.review_num) as col_0_0_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    left outer join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>?
+22:57:11.068+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:57:11.110+0900 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+22:57:11.113+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
+22:57:11.129+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.
+22:57:59.583+0900 [Thread-19] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+22:57:59.584+0900 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Shutdown initiated...
+22:57:59.592+0900 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Shutdown completed.
+22:57:59.707+0900 [restartedMain] INFO  kr.co.abandog.AbandoneddogApplication -Starting AbandoneddogApplication using Java 11.0.12 on LAPTOP-DQ0S1TQE with PID 5616 (C:\Users\한설희\git\project1\abandoneddog\bin\main started by han in C:\Users\한설희\git\project1\abandoneddog)
+22:57:59.708+0900 [restartedMain] INFO  kr.co.abandog.AbandoneddogApplication -No active profile set, falling back to default profiles: default
+22:57:59.924+0900 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22:57:59.971+0900 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 46 ms. Found 11 JPA repository interfaces.
+22:58:00.067+0900 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+22:58:00.067+0900 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol -Initializing ProtocolHandler ["http-nio-8080"]
+22:58:00.067+0900 [restartedMain] INFO  org.apache.catalina.core.StandardService -Starting service [Tomcat]
+22:58:00.067+0900 [restartedMain] INFO  org.apache.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.56]
+22:58:00.090+0900 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+22:58:00.090+0900 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 379 ms
+22:58:00.127+0900 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+22:58:00.136+0900 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-6 - Starting...
+22:58:00.154+0900 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-6 - Start completed.
+22:58:00.154+0900 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22:58:00.287+0900 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22:58:00.288+0900 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+22:58:00.395+0900 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:58:00.630+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login?error']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/layout/home']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/image/*']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/list']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/css/*']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/test']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/openapi/*']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [hasRole('ROLE_USER')] for Ant [pattern='/review/*']
+22:58:00.631+0900 [restartedMain] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [authenticated] for any request
+22:58:00.632+0900 [restartedMain] INFO  org.springframework.security.web.DefaultSecurityFilterChain -Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@619f7df2, org.springframework.security.web.context.SecurityContextPersistenceFilter@3993765b, org.springframework.security.web.header.HeaderWriterFilter@1dfb0d52, org.springframework.security.web.authentication.logout.LogoutFilter@5846c90c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@67213ea5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69fa159a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2cae046a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76b2244d, org.springframework.security.web.session.SessionManagementFilter@57503dbb, org.springframework.security.web.access.ExceptionTranslationFilter@55d0ad2e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13c79000]
+22:58:00.640+0900 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer -LiveReload server is running on port 35729
+22:58:00.652+0900 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol -Starting ProtocolHandler ["http-nio-8080"]
+22:58:00.654+0900 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+22:58:00.658+0900 [restartedMain] INFO  kr.co.abandog.AbandoneddogApplication -Started AbandoneddogApplication in 0.992 seconds (JVM running for 4063.55)
+22:58:00.659+0900 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+22:59:08.406+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Neither @ContextConfiguration nor @ContextHierarchy found for test class [kr.co.abandog.BoardTest], using SpringBootContextLoader
+22:59:08.417+0900 [main] INFO  org.springframework.test.context.support.AbstractContextLoader -Could not detect default resource locations for test class [kr.co.abandog.BoardTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:59:08.418+0900 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -Could not detect default configuration classes for test class [kr.co.abandog.BoardTest]: BoardTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:59:08.562+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Found @SpringBootConfiguration kr.co.abandog.AbandoneddogApplication for test class kr.co.abandog.BoardTest
+22:59:08.656+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+22:59:08.674+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5dc3fcb7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c4c0b41, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@76911385, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5467eea4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@160396db, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a799159, org.springframework.test.context.transaction.TransactionalTestExecutionListener@40ab8a8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ff37443, org.springframework.test.context.event.EventPublishingTestExecutionListener@65cc8228, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@53093491, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@21719a0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76b224cd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77ee25f1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6dd93a21, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@57b9e423]
+22:59:09.020+0900 [main] INFO  kr.co.abandog.BoardTest -Starting BoardTest using Java 11.0.12 on LAPTOP-DQ0S1TQE with PID 13200 (started by han in C:\Users\한설희\git\project1\abandoneddog)
+22:59:09.023+0900 [main] INFO  kr.co.abandog.BoardTest -No active profile set, falling back to default profiles: default
+22:59:10.298+0900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22:59:10.433+0900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 126 ms. Found 11 JPA repository interfaces.
+22:59:11.301+0900 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+22:59:11.377+0900 [main] INFO  org.hibernate.Version -HHH000412: Hibernate ORM core version 5.6.4.Final
+22:59:11.678+0900 [main] INFO  org.hibernate.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22:59:12.231+0900 [main] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Starting...
+22:59:12.601+0900 [main] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Start completed.
+22:59:12.648+0900 [main] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22:59:14.177+0900 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22:59:14.187+0900 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+22:59:14.784+0900 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:59:16.653+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login?error']
+22:59:16.654+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:59:16.654+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:59:16.655+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/']
+22:59:16.655+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+22:59:16.655+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/layout/home']
+22:59:16.655+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/image/*']
+22:59:16.655+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/list']
+22:59:16.655+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/css/*']
+22:59:16.655+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/test']
+22:59:16.656+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/openapi/*']
+22:59:16.656+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [hasRole('ROLE_USER')] for Ant [pattern='/review/*']
+22:59:16.658+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [authenticated] for any request
+22:59:16.689+0900 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain -Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ddb260e, org.springframework.security.web.context.SecurityContextPersistenceFilter@482c8db4, org.springframework.security.web.header.HeaderWriterFilter@1923301a, org.springframework.security.web.authentication.logout.LogoutFilter@1201c2f6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5c1605e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b90a402, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@97e9568, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@482040a, org.springframework.security.web.session.SessionManagementFilter@363a1d8d, org.springframework.security.web.access.ExceptionTranslationFilter@6ac9742e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e0fc5d0]
+22:59:16.831+0900 [main] INFO  kr.co.abandog.BoardTest -Started BoardTest in 8.11 seconds (JVM running for 10.035)
+22:59:17.031+0900 [main] INFO  kr.co.abandog.service.AbandogAdoptReviewServiceImpl -getList 호출
+22:59:17.049+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -searchPage 메서드 호출
+22:59:17.106+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -review_num: abandogAdoptReview.review_num
+22:59:17.107+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -비교 시작
+22:59:17.108+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -정렬 시작
+22:59:17.110+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -prop: review_num
+22:59:17.111+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -그룹화
+22:59:17.111+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -데이터 가져오기
+22:59:17.155+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        abandogado0_.review_num as review_n1_3_0_,
+        member1_.member_email as member_e1_10_1_,
+        abandogado0_.del_dtm as del_dtm2_3_0_,
+        abandogado0_.inst_dtm as inst_dtm3_3_0_,
+        abandogado0_.updt_dtm as updt_dtm4_3_0_,
+        abandogado0_.member_member_email as member_m9_3_0_,
+        abandogado0_.review_content as review_c5_3_0_,
+        abandogado0_.review_count as review_c6_3_0_,
+        abandogado0_.review_file as review_f7_3_0_,
+        abandogado0_.review_title as review_t8_3_0_,
+        member1_.del_dtm as del_dtm2_10_1_,
+        member1_.inst_dtm as inst_dtm3_10_1_,
+        member1_.updt_dtm as updt_dtm4_10_1_,
+        member1_.admin_yn as admin_yn5_10_1_,
+        member1_.member_address as member_a6_10_1_,
+        member1_.member_age as member_a7_10_1_,
+        member1_.member_gender as member_g8_10_1_,
+        member1_.member_name as member_n9_10_1_,
+        member1_.member_phone as member_10_10_1_,
+        member1_.member_pw as member_11_10_1_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    inner join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>? 
+    group by
+        abandogado0_.review_num 
+    order by
+        abandogado0_.review_num desc limit ?
+22:59:17.160+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:59:17.197+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -리턴
+22:59:17.201+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        count(distinct abandogado0_.review_num) as col_0_0_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    inner join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>?
+22:59:17.202+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:59:17.239+0900 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+22:59:17.246+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
+22:59:17.267+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.
+22:59:42.585+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Neither @ContextConfiguration nor @ContextHierarchy found for test class [kr.co.abandog.BoardTest], using SpringBootContextLoader
+22:59:42.597+0900 [main] INFO  org.springframework.test.context.support.AbstractContextLoader -Could not detect default resource locations for test class [kr.co.abandog.BoardTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:59:42.597+0900 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -Could not detect default configuration classes for test class [kr.co.abandog.BoardTest]: BoardTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:59:42.868+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Found @SpringBootConfiguration kr.co.abandog.AbandoneddogApplication for test class kr.co.abandog.BoardTest
+22:59:43.017+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+22:59:43.040+0900 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5dc3fcb7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c4c0b41, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@76911385, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5467eea4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@160396db, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a799159, org.springframework.test.context.transaction.TransactionalTestExecutionListener@40ab8a8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ff37443, org.springframework.test.context.event.EventPublishingTestExecutionListener@65cc8228, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@53093491, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@21719a0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76b224cd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77ee25f1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6dd93a21, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@57b9e423]
+22:59:43.381+0900 [main] INFO  kr.co.abandog.BoardTest -Starting BoardTest using Java 11.0.12 on LAPTOP-DQ0S1TQE with PID 8840 (started by han in C:\Users\한설희\git\project1\abandoneddog)
+22:59:43.393+0900 [main] INFO  kr.co.abandog.BoardTest -No active profile set, falling back to default profiles: default
+22:59:44.709+0900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22:59:44.871+0900 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 150 ms. Found 11 JPA repository interfaces.
+22:59:45.763+0900 [main] INFO  org.hibernate.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+22:59:45.879+0900 [main] INFO  org.hibernate.Version -HHH000412: Hibernate ORM core version 5.6.4.Final
+22:59:46.208+0900 [main] INFO  org.hibernate.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22:59:46.946+0900 [main] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Starting...
+22:59:47.596+0900 [main] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Start completed.
+22:59:47.641+0900 [main] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22:59:48.952+0900 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22:59:48.960+0900 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+22:59:49.719+0900 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:59:51.901+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login?error']
+22:59:51.902+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:59:51.902+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for ExactUrl [processUrl='/login/login']
+22:59:51.903+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/']
+22:59:51.903+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/favicon.ico']
+22:59:51.903+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/layout/home']
+22:59:51.903+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/image/*']
+22:59:51.903+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/list']
+22:59:51.904+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/css/*']
+22:59:51.904+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/test']
+22:59:51.904+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [permitAll] for Ant [pattern='/openapi/*']
+22:59:51.904+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [hasRole('ROLE_USER')] for Ant [pattern='/review/*']
+22:59:51.906+0900 [main] DEBUG org.springframework.security.web.access.expression.ExpressionBasedFilterInvocationSecurityMetadataSource -Adding web access control expression [authenticated] for any request
+22:59:51.953+0900 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain -Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76a90ecb, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e7bf371, org.springframework.security.web.header.HeaderWriterFilter@2e1c3b8f, org.springframework.security.web.authentication.logout.LogoutFilter@266b7d1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@542aba71, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@260af8f7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@781befe7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52d202f0, org.springframework.security.web.session.SessionManagementFilter@41f274d, org.springframework.security.web.access.ExceptionTranslationFilter@1923301a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f0ab520]
+22:59:52.169+0900 [main] INFO  kr.co.abandog.BoardTest -Started BoardTest in 9.084 seconds (JVM running for 11.207)
+22:59:52.435+0900 [main] INFO  kr.co.abandog.service.AbandogAdoptReviewServiceImpl -getList 호출
+22:59:52.467+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -searchPage 메서드 호출
+22:59:52.529+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -review_num: abandogAdoptReview.review_num
+22:59:52.530+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -비교 시작
+22:59:52.531+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -정렬 시작
+22:59:52.532+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -prop: review_num
+22:59:52.534+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -그룹화
+22:59:52.534+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -데이터 가져오기
+22:59:52.581+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        abandogado0_.review_num as review_n1_3_0_,
+        member1_.member_email as member_e1_10_1_,
+        abandogado0_.del_dtm as del_dtm2_3_0_,
+        abandogado0_.inst_dtm as inst_dtm3_3_0_,
+        abandogado0_.updt_dtm as updt_dtm4_3_0_,
+        abandogado0_.member_member_email as member_m9_3_0_,
+        abandogado0_.review_content as review_c5_3_0_,
+        abandogado0_.review_count as review_c6_3_0_,
+        abandogado0_.review_file as review_f7_3_0_,
+        abandogado0_.review_title as review_t8_3_0_,
+        member1_.del_dtm as del_dtm2_10_1_,
+        member1_.inst_dtm as inst_dtm3_10_1_,
+        member1_.updt_dtm as updt_dtm4_10_1_,
+        member1_.admin_yn as admin_yn5_10_1_,
+        member1_.member_address as member_a6_10_1_,
+        member1_.member_age as member_a7_10_1_,
+        member1_.member_gender as member_g8_10_1_,
+        member1_.member_name as member_n9_10_1_,
+        member1_.member_phone as member_10_10_1_,
+        member1_.member_pw as member_11_10_1_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    inner join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>? 
+    group by
+        abandogado0_.review_num 
+    order by
+        abandogado0_.review_num desc limit ?
+22:59:52.584+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:59:52.618+0900 [main] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -리턴
+22:59:52.624+0900 [main] DEBUG org.hibernate.SQL -
+    select
+        count(distinct abandogado0_.review_num) as col_0_0_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    inner join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>?
+22:59:52.625+0900 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder -binding parameter [1] as [INTEGER] - [0]
+22:59:52.674+0900 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+22:59:52.679+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
+22:59:52.699+0900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.
+23:00:05.427+0900 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:00:05.429+0900 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+23:00:05.441+0900 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet -Completed initialization in 12 ms
+23:00:05.443+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Securing GET /review/list
+23:00:05.443+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.HttpSessionSecurityContextRepository -Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7D609D7E418BDA0B1A023AC33EDC8728], Granted Authorities=[ROLE_USER]]]
+23:00:05.445+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter -Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=MemberDTO(member_email=gkstjfgml@naver.com), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7D609D7E418BDA0B1A023AC33EDC8728], Granted Authorities=[ROLE_USER]]]
+23:00:05.447+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.access.intercept.FilterSecurityInterceptor -Authorized filter invocation [GET /review/list] with attributes [hasRole('ROLE_USER')]
+23:00:05.448+0900 [http-nio-8080-exec-1] DEBUG org.springframework.security.web.FilterChainProxy -Secured GET /review/list
+23:00:05.454+0900 [http-nio-8080-exec-1] INFO  kr.co.abandog.service.AbandogAdoptReviewServiceImpl -getList 호출
+23:00:05.468+0900 [http-nio-8080-exec-1] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -searchPage 메서드 호출
+23:00:05.473+0900 [http-nio-8080-exec-1] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -review_num: abandogAdoptReview.review_num
+23:00:05.474+0900 [http-nio-8080-exec-1] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -비교 시작
+23:00:05.474+0900 [http-nio-8080-exec-1] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -정렬 시작
+23:00:05.476+0900 [http-nio-8080-exec-1] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -prop: review_num
+23:00:05.476+0900 [http-nio-8080-exec-1] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -그룹화
+23:00:05.476+0900 [http-nio-8080-exec-1] INFO  kr.co.abandog.repository.SearchAdoptReviewRepositoryImpl -데이터 가져오기
+23:00:05.485+0900 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL -
+    select
+        abandogado0_.review_num as review_n1_3_0_,
+        member1_.member_email as member_e1_10_1_,
+        abandogado0_.del_dtm as del_dtm2_3_0_,
+        abandogado0_.inst_dtm as inst_dtm3_3_0_,
+        abandogado0_.updt_dtm as updt_dtm4_3_0_,
+        abandogado0_.member_member_email as member_m9_3_0_,
+        abandogado0_.review_content as review_c5_3_0_,
+        abandogado0_.review_count as review_c6_3_0_,
+        abandogado0_.review_file as review_f7_3_0_,
+        abandogado0_.review_title as review_t8_3_0_,
+        member1_.del_dtm as del_dtm2_10_1_,
+        member1_.inst_dtm as inst_dtm3_10_1_,
+        member1_.updt_dtm as updt_dtm4_10_1_,
+        member1_.admin_yn as admin_yn5_10_1_,
+        member1_.member_address as member_a6_10_1_,
+        member1_.member_age as member_a7_10_1_,
+        member1_.member_gender as member_g8_10_1_,
+        member1_.member_name as member_n9_10_1_,
+        member1_.member_phone as member_10_10_1_,
+        member1_.member_pw as member_11_10_1_ 
+    from
+        abandog_adopt_review abandogado0_ 
+    inner join
+        member member1_ 
+            on (
+                abandogado0_.member_member_email=member1_.member_email
+            ) 
+    where
+        abandogado0_.review_num>? 
+    group by
+        abandogado0_.review_num 
+    order by
+        abandogado0_.review_num desc limit ?
