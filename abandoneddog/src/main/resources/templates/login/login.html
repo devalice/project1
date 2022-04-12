@@ -20,7 +20,11 @@
 
 			<!-- Remind Passowrd -->
 			<div id="formFooter">
-				<a class="underlineHover" href="#">비밀번호 찾기</a>
+			    <table class="table table-striped" th:each="url : ${urls}">
+			        <tr>
+			            <td><a href="#" th:href="${url.value}" th:text="${url.key}">Naver</a></td>
+			        </tr>
+			    </table>
 			</div>
 		</div>
 	</div>

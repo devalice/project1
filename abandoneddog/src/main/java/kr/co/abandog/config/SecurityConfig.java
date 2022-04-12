@@ -47,7 +47,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         http.logout()
         	.logoutSuccessUrl("/login/login");
         
-      //http.oauth2Login(); 외부로그인
+      //외부로그인
+        http.oauth2Login()
+            .loginPage("/login/login"); 
     }
     
     //인증을 처리
