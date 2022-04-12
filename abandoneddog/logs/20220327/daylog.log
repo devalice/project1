@@ -1,6 +1,0 @@
-00:25:52.948+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -Application shutdown requested.
-00:25:54.381+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
-00:25:54.405+0900 [RMI TCP Connection(2)-127.0.0.1] TRACE org.hibernate.type.spi.TypeConfiguration$Scope -Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@191c9b67] for TypeConfiguration
-00:25:54.409+0900 [RMI TCP Connection(2)-127.0.0.1] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope -Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@4b717686] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@191c9b67]
-00:25:54.428+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown initiated...
-00:25:54.460+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown completed.

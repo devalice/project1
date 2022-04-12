@@ -1,7 +1,0 @@
-00:36:16.711+0900 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m52s296ms618µs300ns).
-02:25:32.617+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -Application shutdown requested.
-02:25:33.449+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
-02:25:33.470+0900 [RMI TCP Connection(2)-127.0.0.1] TRACE org.hibernate.type.spi.TypeConfiguration$Scope -Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@1e92dccc] for TypeConfiguration
-02:25:33.476+0900 [RMI TCP Connection(2)-127.0.0.1] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope -Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@6a40b095] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@1e92dccc]
-02:25:33.512+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
-02:25:33.532+0900 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.

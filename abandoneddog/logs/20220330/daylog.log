@@ -1,5 +1,0 @@
-00:15:24.852+0900 [Thread-42] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
-00:15:25.018+0900 [Thread-42] TRACE org.hibernate.type.spi.TypeConfiguration$Scope -Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@494313b] for TypeConfiguration
-00:15:25.022+0900 [Thread-42] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope -Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@23589b41] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@494313b]
-00:15:25.051+0900 [Thread-42] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-11 - Shutdown initiated...
-00:15:25.076+0900 [Thread-42] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-11 - Shutdown completed.
