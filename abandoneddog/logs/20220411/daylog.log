@@ -1,3 +1,0 @@
-00:03:06.482+0900 [Thread-19] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
-00:03:06.596+0900 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Shutdown initiated...
-00:03:06.643+0900 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Shutdown completed.
