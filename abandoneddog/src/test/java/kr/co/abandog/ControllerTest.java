@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import kr.co.abandog.controller.AbandogController;
 
 @SpringBootTest
-public class OpenAPITest {
+public class ControllerTest {
 
 	@Autowired
 	private AbandogController openAPIController;

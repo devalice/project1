@@ -15,7 +15,7 @@ import kr.co.abandog.service.AbandogAdoptReviewService;
 
 @WebAppConfiguration
 @SpringBootTest
-public class BoardTest {
+public class ServiceTest {
 	
 	@Autowired
 	private AbandogAdoptReviewService reviewService;

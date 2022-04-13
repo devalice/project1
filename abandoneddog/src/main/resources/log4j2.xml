@@ -13,12 +13,25 @@
 			<PatternLayout pattern="${LOG_PATTERN}" charset="UTF-8" />
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" />
-				<SizeBasedTriggeringPolicy size="1000KB" />
+				<SizeBasedTriggeringPolicy size="10000KB" />
+			</Policies>
+			<DefaultRolloverStrategy max="20" fileIndex="min" />
+		</RollingFile>
+		<RollingFile name="SecurityFileLog"
+					 fileName="./logs/${date:yyyyMMdd}/securitydaylog.log"
+					 filePattern="./logs/${date:yyyyMMdd}/securitydaylog-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout pattern="${LOG_PATTERN}" charset="UTF-8" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" />
+				<SizeBasedTriggeringPolicy size="10000KB" />
 			</Policies>
 			<DefaultRolloverStrategy max="20" fileIndex="min" />
 		</RollingFile>
 	</Appenders>
 	<Loggers>
+		<Logger name="kr.co.abandog.config" level="INFO" additivity="false">
+			<AppenderRef ref="SecurityFileLog" />
+		</Logger>
 		<Logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" additivity="false">
 			<AppenderRef ref="FileLog" />
 		</Logger>

@@ -31,14 +31,15 @@ public class ReviewController {
 	}
 	
 	@GetMapping({"/read","modify"})
-	public void adoptReviewRead(@AuthenticationPrincipal MemberDTO memberDTO,
-								@ModelAttribute("requestDTO") PageRequestDTO pageRequestDTO,
+	public void adoptReviewRead(@AuthenticationPrincipal MemberDTO memberDTO,//loadUserByUsername에서 반환하는 객체
+								@ModelAttribute("requestDTO") PageRequestDTO pageRequestDTO, 
 								Integer review_num,
 								Model model) {
 		
 		AbandogAdoptReviewDTO dto = reviewService.get(review_num);
 		model.addAttribute("dto" , dto);
-		model.addAttribute("member", memberDTO);
+		model.addAttribute("member", memberDTO); //로그인 세션 정보
+		
 	}
 	
 	@PostMapping("/modify")
