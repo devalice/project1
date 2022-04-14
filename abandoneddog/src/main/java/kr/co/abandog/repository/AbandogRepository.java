@@ -36,16 +36,19 @@ public interface AbandogRepository extends JpaRepository<Abandog, Long>{
 							 @Param("type_cd") String type_cd);
 	
 	
-	//서울시 보호 유기견과 이미지(한개만) 가져오기
+	//입양 대기 중인 서울시 보호 유기견과 이미지(한개만) 가져오기
 	@Query("select a, ai "
 			+ "from Abandog a join AbandogImg ai "
 			+ "on ai.abandog = a.animal_no "
 			+ "where a.animal_no is not null "
+			+ "  and a.stateCD.state_cd = 'N'"
 			+ "group by a.animal_no")
 	public List<Object[]> getAbandogList();
 	
 	//유기견 아이디로 찾기
-	@Query("select d from Abandog d where d.animal_no = :animal_no")
+	@Query("select d "
+			+ "from Abandog d "
+			+ "where d.animal_no = :animal_no")
 	public Abandog getAbandog(@Param("animal_no") String animal_no);
 	
 

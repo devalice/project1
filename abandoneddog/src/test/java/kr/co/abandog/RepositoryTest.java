@@ -6,8 +6,11 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import kr.co.abandog.dto.AbandogDTO;
 import kr.co.abandog.dto.AbandogImgDTO;
@@ -19,11 +22,13 @@ import kr.co.abandog.entity.MemberRole;
 import kr.co.abandog.repository.AbandogAdoptReviewRepository;
 import kr.co.abandog.repository.AbandogImgRepository;
 import kr.co.abandog.repository.AbandogRepository;
-import kr.co.abandog.repository.AbandogStateCDRepository;
-import kr.co.abandog.repository.AbandogTypeCDRepository;
 import kr.co.abandog.repository.MemberRepository;
 
-@SpringBootTest
+@DataJpaTest
+//내장형 DB 사용 안하 기본 애플리케이션에서 사용한 DataSource가 등록
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+//rollback 필요하지 않으면
+//@Transactional(propagation = Propagation.NOT_SUPPORTED)
 public class RepositoryTest {
 	@Autowired
 	private AbandogRepository abandogRepository;
@@ -37,14 +42,10 @@ public class RepositoryTest {
 	@Autowired
 	private MemberRepository memberRepository;
 	
-	@Autowired
-	private AbandogStateCDRepository abandogStateCDRepository;
-	
-	@Autowired
-	private AbandogTypeCDRepository abandogTypeCDRepository;
-	
+	/*
 	@Autowired
 	private PasswordEncoder passwordEncoder;
+	*/
 	
 	public AbandogDTO entityToDTO(Abandog abandog) {
 		AbandogDTO abandogDTO = AbandogDTO.builder().abandog_id(abandog.getAbandog_id())
@@ -66,13 +67,14 @@ public class RepositoryTest {
 		return abandogImgDTO;
 	}
 	
+	
 	//게시글 임시 데이터 insert
 	@Test
 	public void test() {
 		
-		for(int i=100; i<200; i++) {
+		for(int i=200; i<250; i++) {
 			
-			Optional<Member> member = memberRepository.findByEmail("imaboss@naver.com");
+			Optional<Member> member = memberRepository.findByEmail("gkstjfgml@naver.com");
 			
 			AbandogAdoptReview review = AbandogAdoptReview.builder().review_title(i+ "번째 강아지입니다.")
 																	.review_content(i+"번째 강아지는 귀엽습니다.")
@@ -85,8 +87,7 @@ public class RepositoryTest {
 	
 	//@Test
 	public void test1() {
-		abandogRepository.mergeAbandog("W", 5, "2022-01-13", 
-				   "까마", "1462.0", "openapi@naver.com", "P", "D");
+		abandogRepository.mergeAbandog("W", 5, "2022-01-13","까마", "1462.0", "openapi@naver.com", "P", "D");
 	}
 	
 	//@Test
@@ -94,7 +95,7 @@ public class RepositoryTest {
 		
 		Member member = Member.builder().member_email("imaboss@naver.com")
 										.admin_yn("N")
-										.member_pw(passwordEncoder.encode("1234"))
+										//.member_pw(passwordEncoder.encode("1234"))
 										.build();
 		
 		member.addMemberRole(MemberRole.USER);

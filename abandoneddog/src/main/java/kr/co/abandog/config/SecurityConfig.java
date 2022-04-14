@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import kr.co.abandog.service.MemberUserDetailService;
+import kr.co.abandog.service.MemberDetailService;
 import lombok.extern.log4j.Log4j2;
 
 @Configuration
@@ -17,7 +17,7 @@ import lombok.extern.log4j.Log4j2;
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
-	MemberUserDetailService memberUserDetailService;
+	MemberDetailService memberUserDetailService;
 	
 	@Autowired
 	CustomAuthenticationSuccessHandler customSuccessHandler;

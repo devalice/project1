@@ -18,13 +18,9 @@
 				<input type="submit" class="fadeIn fourth" value="Log In">
 			</form>
 
-			<!-- Remind Passowrd -->
+			<!-- 외부 로그인 -->
 			<div id="formFooter">
-			    <table class="table table-striped" th:each="url : ${urls}">
-			        <tr>
-			            <td><a href="#" th:href="${url.value}" th:text="${url.key}">Naver</a></td>
-			        </tr>
-			    </table>
+				<a href="http://localhost:8080/oauth2/authorization/google">GooGle</a>
 			</div>
 		</div>
 	</div>

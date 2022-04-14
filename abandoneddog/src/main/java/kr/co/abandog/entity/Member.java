@@ -50,6 +50,10 @@ public class Member extends BaseEntity{
 	@Column(name="admin_yn", length=1, nullable= false, columnDefinition = "char")
 	private String admin_yn;
 	
+	//소셜 로그인 여부
+	@Column(name="fromSocial")
+	private Boolean fromSocial;
+	
 	//권한 저장
 	@Builder.Default //특정 값으로 초기화
 	@ElementCollection(fetch=FetchType.LAZY)

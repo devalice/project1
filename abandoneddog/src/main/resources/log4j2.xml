@@ -32,6 +32,9 @@
 		<Logger name="kr.co.abandog.config" level="INFO" additivity="false">
 			<AppenderRef ref="SecurityFileLog" />
 		</Logger>
+		<Logger name="kr.co.abandog.service.OAuthMemberService" level="INFO" additivity="false">
+			<AppenderRef ref="SecurityFileLog" />
+		</Logger>
 		<Logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" additivity="false">
 			<AppenderRef ref="FileLog" />
 		</Logger>
