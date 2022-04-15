@@ -13,16 +13,15 @@
 				<label >내용</label>
 				<textarea class="form-control" rows="5" name="review_content"></textarea>
 			</div>
-			<div class="form-group">
-				<input name="uploadFiles" type="file" accept="image/*" multiple />
-				<button class="uploadBtn" type="button">업로드</button>
-				<span style="font-size:10px; color: gray;">※첨부파일은 최대 3개까지 등록이 가능합니다.</span>
+			<div class="mb-3">
+			  <label for="formFileMultiple" class="form-label" >※첨부파일은 최대 3개까지 등록이 가능합니다.</label>
+			  <input class="form-control" type="file" id="formFileMultiple" accept="image/*" multiple>
 			</div>
 			<div class="form-group">
 				<label >작성자 이메일</label>
 				<input type="email" class="form-control" name="member_email" th:value="${member.member_email}" th:placeholder="${member.member_email}" readonly>
 			</div>
-			<button type="submit" class="btn btn-primary">저장</button>
+			<button type="submit" class="btn btn-primary uploadBtn">저장</button>
 		</form>
 		
 		

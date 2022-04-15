@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception{
         http.csrf().disable()
         	.authorizeRequests()
-        	.antMatchers("/","/favicon.ico", "/layout/home", "/image/*", "/list", "/css/*", "/test", "/openapi/*").permitAll() //로그인 여부 와 상관없이 접근 가능
+        	.antMatchers("/","/favicon.ico", "/layout/home", "/image/*", "/list", "/css/*","/js/*", "/test", "/openapi/*").permitAll() //로그인 여부 와 상관없이 접근 가능
             .antMatchers("/review/*").hasRole("USER") //USER 권한이 있어야 만 접근 가능
         	.anyRequest().authenticated(); //그 외의 요청은 권한이 있으면 허용
         
