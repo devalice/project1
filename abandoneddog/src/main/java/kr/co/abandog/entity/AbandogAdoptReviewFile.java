@@ -1,9 +1,13 @@
 package kr.co.abandog.entity;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+
+import org.springframework.data.annotation.LastModifiedDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,12 +22,22 @@ import lombok.ToString;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AbandogAdoptReviewFile {
+public class AbandogAdoptReviewFile{
 	
 	@EmbeddedId
 	private AbandogAdoptReviewFileKey fileKey;
 
-	@Column(name="review_file", length=100)
-	private String review_file;
+	@Column(name="reviewFile_name", length=100)
+	private String reviewFile_name; //원본 파일 이름
 	
+	@Column(name="reviewFile_uuid", length=100)
+	private String reviewFile_uuid; //서버 파일 이름
+	
+	@Column(name="reviewFile_path", length=100)
+	private String reviewFile_path; //파일 위치
+	
+	//게시물과 함께 생성되고 수정되므로 삭제 일자만 가짐
+	@Column(name="del_dtm")
+	private LocalDateTime del_dtm;
+
 }

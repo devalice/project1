@@ -48,13 +48,35 @@
 				var inputFile = $("input[type='file']");
 				var files = inputFile[0].files;
 				
-				if(files.length < 1){
-					alert("업로드할 파일은 1개 이상이여야 합니다.");
+				if(files.length > 3){
+					alert("업로드할 파일은 3개 이하여야 합니다.");
 					return;
 				}
 				
-				alert(inputFile)
-			})
+				//선택한 파일들을 formData에 추가
+				for (var i = 0; i < files.length; i++) {
+					console.log(files[i]);
+					formData.append("uploadFiles", files[i]);
+				}
+				
+				//upload ajax
+				$.ajax({
+					url: '/uploadajax',
+					processData: false,
+					contentType: false,
+					data: formData,
+					type: 'POST',
+					dataType:'json',
+					success: function(result) {
+					console.log(result);
+						//나중에 화면 처리
+					},
+					error: function(jqXHR, textstatus, errorThrown) {
+						console.log(textStatus);
+					}
+				});
+				
+			});
 		</script>
 	</th:block>
 </th:block>

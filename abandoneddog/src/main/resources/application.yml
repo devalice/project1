@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/abandog_tmp?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
+    username: user00
+    password: user00
+  jpa:
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: false
+  thymeleaf:
+    enabled: true
+    cache: false
+  servlet:
+    multipart:
+      enabled: true
+      location: c:\\upload
+      max-request-size: 30MB
+      max-file-size: 10MB
+  profiles:
+    include: oauth
+
+logging:
+  level: 
+    org:
+      hibernate:
+        SQL: debug
+      springframework:
+        security:
+          web: debug
+    kr:
+      co:
+        seolsoft:
+          security: debug
+  config: classpath:log4j2.xml
+  
+  
+custom:
+  path: 
+    uploadImg: c:\\upload

@@ -5,7 +5,7 @@ import java.util.Date;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import kr.co.abandog.controller.AbandogController;
+import kr.co.abandog.controller.AbandogRestController;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -14,7 +14,7 @@ import lombok.extern.log4j.Log4j2;
 @RequiredArgsConstructor
 public class SceduledTasks {
 
-	private final AbandogController abandogController;
+	private final AbandogRestController abandogController;
 	
 	//매일 10시마다 실행
 	@Scheduled(cron = "0 00 10 * * *")

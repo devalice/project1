@@ -23,7 +23,7 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 @RequiredArgsConstructor
 @RequestMapping("/openapi/") //공통주소
-public class AbandogController {
+public class AbandogRestController {
 
 	private final AbandogService abandogService;
 

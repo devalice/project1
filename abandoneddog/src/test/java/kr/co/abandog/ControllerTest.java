@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import kr.co.abandog.controller.AbandogController;
+import kr.co.abandog.controller.AbandogRestController;
 
 @SpringBootTest
 public class ControllerTest {
 
 	@Autowired
-	private AbandogController openAPIController;
+	private AbandogRestController openAPIController;
 	
 	@Test
 	public void test1() {
