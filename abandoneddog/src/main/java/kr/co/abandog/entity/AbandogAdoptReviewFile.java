@@ -23,13 +23,7 @@ public class AbandogAdoptReviewFile {
 	@EmbeddedId
 	private AbandogAdoptReviewFileKey fileKey;
 
-	@Column(name="review_file1", length=100)
-	private String review_file1;
-	
-	@Column(name="review_file2", length=100)
-	private String review_file2;
-	
-	@Column(name="review_file3", length=100)
-	private String review_file3;
+	@Column(name="review_file", length=100)
+	private String review_file;
 	
 }

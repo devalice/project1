@@ -13,7 +13,7 @@
 				<label >내용</label>
 				<textarea class="form-control" rows="5" name="review_content"></textarea>
 			</div>
-			<div class="mb-3">
+			<div class="form-group mb-3">
 			  <label for="formFileMultiple" class="form-label" >※첨부파일은 최대 3개까지 등록이 가능합니다.</label>
 			  <input class="form-control" type="file" id="formFileMultiple" accept="image/*" multiple>
 			</div>
@@ -24,31 +24,37 @@
 			<button type="submit" class="btn btn-primary uploadBtn">저장</button>
 		</form>
 		
+		<button class="testBtn">파일 업로드 테스트</button>
 		
 		<script>
-		$('.uploadBtn').click(function( ) {
-			var formData = new FormData();
-			var inputFile = $("input[type='file']");
-			var files = inputFile[0].files;
+			$('.uploadBtn').click(function( ) {
+				var formData = new FormData();
+				var inputFile = $("input[type='file']");
+				var files = inputFile[0].files;
+				
+				if(files.length > 3){
+					alert("업로드할 파일은 3개 이하여야 합니다.");
+					return;
+				}
 			
-			if(files.length < 1){
-				alert("업로드할 파일을 선택하지 않으셨습니다.");
-				return;
-			}else if(files.length > 3){
-				alert("업로드할 파일은 3개 이하여야 합니다.");
-				return;
-			}
-		
-			//선택한 파일들을 formData에 추가
-			for (var i = 0; i < 3; i++) {
-				console.log(files[i]);
-				formData.append("uploadFiles", files[i]);
-			}
+				//선택한 파일들을 formData에 추가
+				for (var i = 0; i < 3; i++) {
+					console.log(files[i]);
+					formData.append("uploadFiles", files[i]);
+				}
+			});
 			
-			
-			
-			
-		});
+			$('.testBtn').click(function(){
+				var inputFile = $("input[type='file']");
+				var files = inputFile[0].files;
+				
+				if(files.length < 1){
+					alert("업로드할 파일은 1개 이상이여야 합니다.");
+					return;
+				}
+				
+				alert(inputFile)
+			})
 		</script>
 	</th:block>
 </th:block>

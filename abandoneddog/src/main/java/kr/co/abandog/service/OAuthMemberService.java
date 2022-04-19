@@ -46,6 +46,7 @@ public class OAuthMemberService extends DefaultOAuth2UserService{
 		//DB에 없으면 추가
 		Member member = Member.builder().member_email(email)
 										.member_pw(passwordEncoder.encode("1111"))
+										.member_name(email)
 										.fromSocial(true)
 										.admin_yn("N")
 										.build();

@@ -19,6 +19,7 @@ import lombok.extern.log4j.Log4j2;
 public class MemberDTO extends User implements OAuth2User{
 	private String member_email;
 	private String member_pw;
+	private String member_name;
 	private Boolean fromSocial;
 	
 	//속성 값을 읽어오기 위한 Map
