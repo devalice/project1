@@ -19,7 +19,6 @@ import lombok.experimental.SuperBuilder;
 @Table(name="abandog_adopt_review")
 @ToString
 @Getter
-//@Builder
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor

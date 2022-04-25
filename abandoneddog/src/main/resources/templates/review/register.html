@@ -4,9 +4,9 @@
 <th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
 	<th:block th:fragment="content">
 		<h1 class="mt-4" align="center">새글 작성</h1>
-		<form th:action="@{/review/register}" th:method="post">
+		<form name="registerForm">
 			<div class="form-group">
-			<label >제목</label>
+				<label >제목</label>
 				<input type="text" class="form-control" name="review_title" placeholder="제목을 입력하세요">
 			</div>
 			<div class="form-group">
@@ -15,36 +15,25 @@
 			</div>
 			<div class="form-group mb-3">
 			  <label for="formFileMultiple" class="form-label" >※첨부파일은 최대 3개까지 등록이 가능합니다.</label>
-			  <input class="form-control" type="file" id="formFileMultiple" accept="image/*" multiple>
+			  <input class="form-control" name= "reviewFile_name" type="file" id="formFileMultiple" accept="image/*" multiple>
+			</div>
+			<div class="form-group" id="filePath">
 			</div>
 			<div class="form-group">
 				<label >작성자 이메일</label>
 				<input type="email" class="form-control" name="member_email" th:value="${member.member_email}" th:placeholder="${member.member_email}" readonly>
 			</div>
-			<button type="submit" class="btn btn-primary uploadBtn">저장</button>
 		</form>
 		
-		<button class="testBtn">파일 업로드 테스트</button>
+		<button class="btn btn-primary uploadBtn">저장</button>
 		
 		<script>
-			$('.uploadBtn').click(function( ) {
+		
+			var actionForm = $("form"); //form 태그 객체
+			
+			
+			$('.uploadBtn').click(function(){
 				var formData = new FormData();
-				var inputFile = $("input[type='file']");
-				var files = inputFile[0].files;
-				
-				if(files.length > 3){
-					alert("업로드할 파일은 3개 이하여야 합니다.");
-					return;
-				}
-			
-				//선택한 파일들을 formData에 추가
-				for (var i = 0; i < 3; i++) {
-					console.log(files[i]);
-					formData.append("uploadFiles", files[i]);
-				}
-			});
-			
-			$('.testBtn').click(function(){
 				var inputFile = $("input[type='file']");
 				var files = inputFile[0].files;
 				
@@ -55,28 +44,54 @@
 				
 				//선택한 파일들을 formData에 추가
 				for (var i = 0; i < files.length; i++) {
-					console.log(files[i]);
 					formData.append("uploadFiles", files[i]);
 				}
 				
-				//upload ajax
-				$.ajax({
-					url: '/uploadajax',
-					processData: false,
-					contentType: false,
-					data: formData,
-					type: 'POST',
-					dataType:'json',
-					success: function(result) {
-					console.log(result);
-						//나중에 화면 처리
-					},
-					error: function(jqXHR, textstatus, errorThrown) {
-						console.log(textStatus);
-					}
-				});
-				
+				if(files.length > 0){
+					//upload ajax
+					$.ajax({
+							url: '/review/fileuploadajax',
+							processData: false,
+							contentType: false,
+							data: formData,
+							type: 'POST',
+							dataType:'json',
+							success: function(result) {
+								
+								const str = new Array();
+								
+								for(let i=0; i<result.length; i++){
+									str.push(result[i]);
+								};
+								
+								$('#filePath').append(
+										"<input type='hidden' class='form-control' name='reviewFile_path' value=" + str + "> "
+								);
+								
+								submit();
+							},
+							error: function(jqXHR, textstatus, errorThrown) {
+								console.log(textstatus);
+							}
+				    });
+				} else{
+					submit();
+				}
 			});
+			
+			function submit(){
+				
+				//직렬화
+				actionForm.serialize();
+				
+				var reviewFile_path = $("input[name='reviewFile_path']").val();
+				
+				console.log(reviewFile_path);
+				
+				actionForm.attr("action", "/review/register")
+						  .attr("method","post")
+						  .submit();
+			}
 		</script>
 	</th:block>
 </th:block>

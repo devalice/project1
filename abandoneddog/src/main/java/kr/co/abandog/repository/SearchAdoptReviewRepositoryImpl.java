@@ -47,15 +47,11 @@ public class SearchAdoptReviewRepositoryImpl extends QuerydslRepositorySupport i
 		//동적 쿼리 생성
 		BooleanBuilder booleanBuilder = new BooleanBuilder();
 		
-		log.info("review_num: "+review.review_num);
-		
 		//조건 생성
 		BooleanExpression expression = review.review_num.gt(0);
 		//조건 추가
 		booleanBuilder.and(expression);
 		
-		
-		log.info("비교 시작");
 		//t: title, c: content, w: writer
 		if(type != null) {
 			String [] typeAr = type.split("");
@@ -81,7 +77,6 @@ public class SearchAdoptReviewRepositoryImpl extends QuerydslRepositorySupport i
 		//조건 검색 추가
 		tuple.where(booleanBuilder);
 		
-		log.info("정렬 시작");
 		//정렬 추가
 		Sort sort = pageable.getSort();
 		sort.stream().forEach(order -> {
@@ -89,14 +84,10 @@ public class SearchAdoptReviewRepositoryImpl extends QuerydslRepositorySupport i
 			Order direction = order.isAscending() ? Order.ASC : Order.DESC;
 			String prop = order.getProperty();
 			
-			log.info("prop: "+prop);
-			
 			PathBuilder orderByExpression = new PathBuilder(AbandogAdoptReview.class, "abandogAdoptReview");
 			tuple.orderBy(new OrderSpecifier(direction, orderByExpression.get(prop)));					
 		});
 		
-		
-		log.info("그룹화");
 		//그룹화
 		tuple.groupBy(review);
 		
@@ -104,11 +95,9 @@ public class SearchAdoptReviewRepositoryImpl extends QuerydslRepositorySupport i
 		tuple.offset(pageable.getOffset()); //페이지 번호
 		tuple.limit(pageable.getPageSize()); //페이지 사이즈
 		
-		log.info("데이터 가져오기");
 		//데이터 가져오기
 		List<Tuple> result = tuple.fetch();
 	
-		log.info("리턴");
 		return new PageImpl<Object []>(result.stream()
 											 .map(t -> t.toArray())
 											 .collect(Collectors.toList())

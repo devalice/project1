@@ -52,7 +52,7 @@ public class AbandogAdoptReviewServiceImpl implements AbandogAdoptReviewService 
 	@Override
 	public Integer reviewRegister(AbandogAdoptReviewDTO dto) {
 		log.info("reviewRegister 호출");
-		log.info("dto:"+ dto.getMember_email());
+		
 		AbandogAdoptReview review = dtoToEntity(dto);
 		adopReviewRepository.save(review);
 		return review.getReview_num();

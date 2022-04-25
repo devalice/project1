@@ -7,13 +7,13 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import org.springframework.data.annotation.LastModifiedDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @Table(name="abandog_adopt_review_file")
@@ -26,9 +26,6 @@ public class AbandogAdoptReviewFile{
 	
 	@EmbeddedId
 	private AbandogAdoptReviewFileKey fileKey;
-
-	@Column(name="reviewFile_name", length=100)
-	private String reviewFile_name; //원본 파일 이름
 	
 	@Column(name="reviewFile_uuid", length=100)
 	private String reviewFile_uuid; //서버 파일 이름

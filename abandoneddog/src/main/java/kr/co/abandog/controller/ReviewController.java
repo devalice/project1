@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.co.abandog.dto.AbandogAdoptReviewDTO;
+import kr.co.abandog.dto.AbandogAdoptReviewFileDTO;
 import kr.co.abandog.dto.MemberDTO;
 import kr.co.abandog.dto.PageRequestDTO;
+import kr.co.abandog.service.AbandogAdoptReviewFileService;
 import kr.co.abandog.service.AbandogAdoptReviewService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -23,6 +25,7 @@ import lombok.extern.log4j.Log4j2;
 public class ReviewController {
 	
 	private final AbandogAdoptReviewService reviewService;
+	private final AbandogAdoptReviewFileService reviewFileService;
 	
 	@GetMapping("/list")
 	public void adoptReview(PageRequestDTO pageRequestDTO, Model model) {
@@ -65,9 +68,19 @@ public class ReviewController {
 	}
 	
 	@PostMapping("/register")
-	public String adoptReviewRegistr(AbandogAdoptReviewDTO dto, RedirectAttributes rattr) {
+	public String adoptReviewRegistr(AbandogAdoptReviewDTO dto,
+								     RedirectAttributes rattr,
+								     AbandogAdoptReviewFileDTO uploadFiles) {
+		
+		log.info("regiser post...");
+		//게시물 등록
 		Integer review_num = reviewService.reviewRegister(dto);
+		
+		//게시물 파일 등록
+		reviewFileService.reviewFileRegister(review_num, uploadFiles);
+		
 		rattr.addFlashAttribute("msg", review_num + "등록");
+		
 		return "redirect:/review/list";		
 	}
 	
