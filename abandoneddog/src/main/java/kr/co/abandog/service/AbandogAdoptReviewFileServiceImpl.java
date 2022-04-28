@@ -5,9 +5,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import kr.co.abandog.dto.AbandogAdoptReviewDTO;
 import kr.co.abandog.dto.AbandogAdoptReviewFileDTO;
 import kr.co.abandog.entity.AbandogAdoptReview;
 import kr.co.abandog.entity.AbandogAdoptReviewFile;
+import kr.co.abandog.entity.Member;
 import kr.co.abandog.repository.AbandogAdoptReviewFileRepository;
 import kr.co.abandog.repository.AbandogAdoptReviewRepository;
 import lombok.RequiredArgsConstructor;
@@ -55,6 +57,29 @@ public class AbandogAdoptReviewFileServiceImpl implements AbandogAdoptReviewFile
 			AbandogAdoptReviewFile reviewFile = dtoToEntity(list.get(i), (AbandogAdoptReview)ar[0]);
 			adopReviewFileRepository.save(reviewFile);
 		}
+	}
+	
+	
+	//게시물 파일 삭제
+	@Override
+	public void reviewFileRemove(Integer review_num) {
+		adopReviewFileRepository.deleteByReviewNum(review_num);
+		
+	}
+
+	//게시물 파일 상세 보기
+	@Override
+	public List<AbandogAdoptReviewFileDTO> get(Integer review_num) {
+		
+		List<AbandogAdoptReviewFileDTO> list = new ArrayList<AbandogAdoptReviewFileDTO>();
+		
+		List<Object> reviewfile = adopReviewFileRepository.getReviewByReviewNum(review_num);
+		
+		for(Object ob: reviewfile) {
+			list.add(entityToDTO((AbandogAdoptReviewFile)ob));
+		}
+		
+		return list;
 	}
 
 }

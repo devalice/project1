@@ -1,5 +1,7 @@
 package kr.co.abandog.controller;
 
+import java.util.List;
+
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,7 +42,11 @@ public class ReviewController {
 								Model model) {
 		
 		AbandogAdoptReviewDTO dto = reviewService.get(review_num);
+		List<AbandogAdoptReviewFileDTO> filedto = reviewFileService.get(review_num);
+		
 		model.addAttribute("dto" , dto);
+		model.addAttribute("filedto" , filedto);
+		
 		model.addAttribute("member", memberDTO); //로그인 세션 정보
 		
 	}
@@ -86,6 +92,7 @@ public class ReviewController {
 	
 	@PostMapping("/remove")
 	public String adoptReviewRemove(Integer review_num, RedirectAttributes rattr) {
+		reviewFileService.reviewFileRemove(review_num);
 		reviewService.reviewRemove(review_num);
 		
 		rattr.addFlashAttribute("msg", review_num + "삭제");

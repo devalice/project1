@@ -12,6 +12,7 @@ import kr.co.abandog.dto.PageRequestDTO;
 import kr.co.abandog.dto.PageResultDTO;
 import kr.co.abandog.entity.AbandogAdoptReview;
 import kr.co.abandog.entity.Member;
+import kr.co.abandog.repository.AbandogAdoptReviewFileRepository;
 import kr.co.abandog.repository.AbandogAdoptReviewRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -75,8 +76,7 @@ public class AbandogAdoptReviewServiceImpl implements AbandogAdoptReviewService 
 	//게시물 삭제
 	@Override
 	public void reviewRemove(Integer review_num) {
-		
-		adopReviewRepository.deleteByReviewNum(review_num);		
+		adopReviewRepository.deleteByReviewNum(review_num);
 	}
 
 }

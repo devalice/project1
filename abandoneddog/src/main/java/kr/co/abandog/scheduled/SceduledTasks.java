@@ -17,7 +17,7 @@ public class SceduledTasks {
 	private final AbandogRestController abandogController;
 	
 	//매일 10시마다 실행
-	@Scheduled(cron = "0 00 10 * * *")
+	@Scheduled(cron = "0 0 10 * * *")
 	public void run() {
 		log.info("openAPI 병합 작업 수행: "+ new Date());
 		abandogController.callopenAPIWithJSON();

@@ -32,6 +32,7 @@ public class ReviewRestController {
 	private String makeDirectory() {
 		String str = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
 		
+		System.out.println(str);
 		// '/'를 파일 구분자로 변경
 		String realUploadPath = str.replace("/", File.separator);
 		

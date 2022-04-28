@@ -22,6 +22,20 @@
 	</div>
 	
 	<div class="form-group">
+		<thead>
+			<tr>파일 다운로드</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="file : ${filedto}" >
+				 <td>
+					<a class="form-control" rows="5" th:href='${file.getReviewFile_path}'>[[${file.reviewFile_name}]]</a>
+				 </td>
+			</tr>
+		</tbody>
+	</div>
+	
+	<div class="form-group">
 	<label >작성자</label>
 	<input type="text" class="form-control" name="member_name" th:value="${dto.member_name}" readonly>
 	</div>

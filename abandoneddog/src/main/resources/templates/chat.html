@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+	<th:block th:fragment="content">
+	
+		<!-- 별명 입력 -->
+		닉네임: <input type="text" id="nickname" th:placeholder="${member.member_email}" th:value="${member.member_email}" readonly/>
+		<input type="button" id="socketbtn" value="입장" />
+	
+		<h3>채팅 영역</h3>
+		<div id="chatarea">
+			<div id="chatmessagearea"></div>
+		</div>
+	
+		<h3>메시지 입력 영역</h3>
+		<input type="text" id="message">
+		<input type="button" id="sendbtn" value="전송" />
+
+		
+		<script type="text/javascript">
+		
+			window.addEventListener("load", function(e){
+				var nickname = document.getElementById("nickname");
+				var socketbtn = document.getElementById("socketbtn");
+				var chatarea = document.getElementById("chatarea");
+				var chatmessagearea = document.getElementById("chatmessagearea");
+				var message = document.getElementById("message");
+				var sendbtn = document.getElementById("sendbtn");
+				
+				var websocket;
+				
+				//입장 버튼 눌렀을 때
+				socketbtn.addEventListener('click', function(e){
+					if(socketbtn.value == '입장'){
+						
+						//닉네임이 없으면
+						if(nickname.value.trim() < 1){
+							alert('닉네임은 필수 입력입니다.');
+							nickname.focus();
+							return;
+						}
+						
+						//웹 소켓 생성
+						//모바일 크롬 브라우저 연결이 안됨 - 모든 클라이언트 브라우저에서 웹소켓을 지원한지 않음
+						//안드로이드 용 웹 소켓을 이용해야함
+						websocket = new WebSocket("ws://localhost:8080/chat-ws");
+					
+						//연결 되었을 때
+						websocket.addEventListener('open', function(e){
+							websocket.send(nickname.value + " 참석");
+							nickname.readOnly = true;
+						})
+					
+						//연결 해제할 때
+						websocket.addEventListener('close', function(e){
+							alert("접속 종료");
+						})
+						
+						//메시지가 왔을 때 
+						websocket.addEventListener('message', function(e){
+							//메시지
+							var msg = e.data;
+							chatmessagearea.innerHTML = msg + "<br/>" + chatmessagearea.innerHTML
+							if(msg == (nickname.value + " 나갔습니다.")){
+								websocket.close();	
+							}
+						})
+						socketbtn.value = '퇴장';
+					}else{
+						websocket.send(nickname.value + " 나갔습니다.");
+						socketbtn.value = '입장';
+						nickname.readOnly = false;
+					}
+				});
+				
+				//전송 버튼을 누를 때
+				sendbtn.addEventListener('click', function(e){
+					websocket.send(nickname.value + ":" + message.value);
+					message.value = "";
+				});
+				
+				//message에서 Enter를 누를 때 메시지 전송
+				message.addEventListener('keypress', function(e){
+					event = e || window.event
+					var keycode = (event.keyCode ? event.keyCode : event.which)
+					if(keycode == '13'){
+						websocket.send(nickname.value + ":" + message.value);
+						message.value = "";
+					}
+				});
+				
+			});
+
+		</script>
+	
+	</th:block>
+</th:block>

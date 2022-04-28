@@ -8,17 +8,16 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import kr.co.abandog.dto.AbandogDTO;
 import kr.co.abandog.dto.AbandogImgDTO;
 import kr.co.abandog.entity.Abandog;
 import kr.co.abandog.entity.AbandogAdoptReview;
+import kr.co.abandog.entity.AbandogAdoptReviewFile;
 import kr.co.abandog.entity.AbandogImg;
 import kr.co.abandog.entity.Member;
 import kr.co.abandog.entity.MemberRole;
+import kr.co.abandog.repository.AbandogAdoptReviewFileRepository;
 import kr.co.abandog.repository.AbandogAdoptReviewRepository;
 import kr.co.abandog.repository.AbandogImgRepository;
 import kr.co.abandog.repository.AbandogRepository;
@@ -41,6 +40,9 @@ public class RepositoryTest {
 	
 	@Autowired
 	private MemberRepository memberRepository;
+	
+	@Autowired
+	private AbandogAdoptReviewFileRepository fileRepository;
 	
 	/*
 	@Autowired
@@ -69,7 +71,7 @@ public class RepositoryTest {
 	
 	
 	//게시글 임시 데이터 insert
-	@Test
+	//@Test
 	public void test() {
 		
 		for(int i=200; i<250; i++) {
@@ -157,5 +159,14 @@ public class RepositoryTest {
 	public void test5() {
 		Abandog abandog = abandogRepository.getAbandog("295.0");
 		abandogImgRepository.mergeAbandogImg(abandog.getAnimal_no(), "img", 0, "http");
+	}
+	
+	@Test
+	public void test6() {
+		List<Object> filereview = fileRepository.getReviewByReviewNum(556);
+		
+		for(Object file : filereview) {
+			System.out.println((AbandogAdoptReviewFile)file);
+		}
 	}
 }

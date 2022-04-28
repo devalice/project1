@@ -9,6 +9,7 @@
 			<!-- Icon -->
 			<div class="fadeIn first">
 				<img src="/image/icon.png" height="100" width="100" id="icon" alt="User Icon" />
+				<!--  <a href='/image/icon.png'>이미지</a> -->
 			</div>
 
 			<!-- Login Form: post방식으로 보내면 spring security가 제공하는 로그인 로직을 탐-->
@@ -16,8 +17,8 @@
 				<input type="text" id="login" class="fadeIn second" name="username" placeholder="아이디"> 
 				<input type="text" id="password" class="fadeIn third" name="password" placeholder="비밀번호"> 
 				<input type="submit" class="fadeIn fourth" value="Log In">
+				<!-- 자바스크립트에서 암호화해서 post -->
 			</form>
-
 			<!-- 외부 로그인 -->
 			<div id="formFooter">
 				<a href="http://localhost:8080/oauth2/authorization/google">GooGle</a>
